@@ -11,3 +11,5 @@ def onlineSessions(request):
 def assignments(request):
     return render(request,'teacherportal/assignments.html')
 
+def schedule(request):
+    return render(request,'teacherPortal/schedule.html')

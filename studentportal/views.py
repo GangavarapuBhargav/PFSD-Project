@@ -9,3 +9,6 @@ def courses(request):
 
 def studentTimetable(request):
     return render(request,'studentportal/studentTimetable.html')
+
+def student_schedule(request):
+    return render(request,'studentportal/student_schedule.html')
