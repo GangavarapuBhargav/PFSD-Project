@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'course/course1.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/d50c8cbce8.js" crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            background-color: #f8f9fa; /* Light background color */
+        }
+        .heading {
+            color: white;
+            background-color: #1f5180; /* Dark background for heading */
+            padding: 20px;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .content {
+            color: #333; /* Dark text for readability */
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body class="background-images">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
+        <a class="navbar-brand logo" href="{% url 'index' %}">Language Learning</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+             <button class="btn btn-light" onclick="location.href = '{% url 'login' %}'">Login</button>
+             <button class="btn btn-light" onclick="location.href = '{% url 'register' %}'">Register</button>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Languages
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">English</a>
+                <a class="dropdown-item" href="#">Spanish</a>
+                <a class="dropdown-item" href="#">Japanese</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="{% url 'languages' %}">More Languages</a>
+              </div>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+
+      <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="text-center heading">Spanish Language Overview</h1>
+                <div class="content">
+                    <p>
+                        Spanish, or español, is a Romance language that originated in the Iberian Peninsula and has since spread to the Americas, Africa, and Asia. It is the second most spoken language in the world by native speakers, after Mandarin Chinese. With over 460 million native speakers, Spanish is an essential language for global communication.
+                    </p>
+                    <p>
+                        La lengua española es conocida por su riqueza y diversidad. It has numerous dialects, including Castilian, Latin American Spanish, and Caribbean Spanish, among others. Each of these dialects has its own unique features, making Spanish a fascinating language to learn and explore.
+                    </p>
+                    <p>
+                        One of the distinguishing features of Spanish is its phonetic nature, meaning that it is pronounced as it is written. This makes it relatively easier for learners to achieve good pronunciation. The Spanish alphabet consists of 27 letters, including the unique letter ñ, which is pronounced as "enye."
+                    </p>
+                    <p>
+                        Spanish grammar has several characteristics that learners should be aware of. For example, Spanish nouns are gendered, meaning they can be either masculine or feminine. This affects articles and adjectives that accompany the noun. In addition, verb conjugations vary depending on the subject pronoun, which can be challenging for beginners but ultimately enriches the language.
+                    </p>
+                    <p>
+                        The vocabulary of Spanish is vast and continues to evolve. Many words in Spanish have Latin roots, but the language has also absorbed terms from Arabic, indigenous languages, and more recently, English. This makes Spanish a dynamic language that reflects cultural exchanges over centuries.
+                    </p>
+                    <p>
+                        Spanish is not just a language; it is a cultural treasure. It is the official language of 21 countries, including Spain, Mexico, Argentina, Colombia, and Peru. Each country has its own customs, traditions, and expressions, making Spanish a rich tapestry of cultures.
+                    </p>
+                    <p>
+                        In Spain, you will find diverse regional identities, such as the Catalans in Catalonia and the Basques in the Basque Country. These regions not only have their own languages but also distinct traditions, food, and music. 
+                    </p>
+                    <p>
+                        Latin American Spanish varies significantly from its European counterpart. For instance, in Mexico, Spanish is known for its unique expressions and slang, while in Argentina, the use of "vos" instead of "tú" for informal address is a hallmark of the language.
+                    </p>
+                    <p>
+                        Learning Spanish opens doors to understanding rich literary works by authors such as Gabriel García Márquez, Pablo Neruda, and Isabel Allende. Their novels, poetry, and essays offer insights into the Spanish-speaking world and its diverse experiences.
+                    </p>
+                    <p>
+                        Additionally, Spanish is an important language in the global economy. Many companies seek bilingual employees who can communicate effectively in Spanish, especially in industries like business, tourism, and healthcare. Proficiency in Spanish can enhance career opportunities and professional growth.
+                    </p>
+                    <p>
+                        Whether you are traveling to a Spanish-speaking country, engaging with Spanish-speaking communities, or simply interested in learning a new language, Spanish offers countless benefits. It helps bridge cultural gaps, foster connections, and broaden your perspective on the world.
+                    </p>
+                    <p>
+                        In conclusion, learning Spanish is not just about mastering grammar and vocabulary; it is about embracing a vibrant culture and connecting with people. With practice and dedication, you will find that Spanish is a rewarding language to learn, full of beauty and depth. So, ¡buena suerte! (Good luck!) on your language learning journey!
+                    </p>
+                </div>
+            </div>
+        </div>
+      </div>
+      <div class="d-flex flex-row m-5 justify-content-between">
+      <button class="btn btn-outline-success" onclick="location.href='{% url 'quiz1' %}'">Attempt Quiz</button>
+      <button class="btn btn-outline-danger" onclick="location.href='{% url 'languages' %}'">back</button>
+      </div>
+</body>
+</html>

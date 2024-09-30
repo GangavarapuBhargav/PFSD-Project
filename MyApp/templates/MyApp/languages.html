@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Learning</title>
+   
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/d50c8cbce8.js" crossorigin="anonymous"></script>
+
+    <style>
+      .carder {
+          background-color: #f0f0f0;
+          border-radius: 8px;
+          transition: all 0.3s ease;
+          padding: 20px;
+          margin-top: 50px;
+          width: 300px;
+          height: 250px;
+      }
+
+      .carder:hover {
+          background-color: #e0e0e0;
+          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+          transform: scale(1.05);
+      }
+
+      .backgrounds {
+          background-image: url('https://res.cloudinary.com/dlpitkw7i/image/upload/v1726503917/hi_wzfrru.png');
+          background-size: cover;
+          background-position: center;
+          height: 300vh;
+          width: 100vw;
+      }
+
+      .navbar {
+          margin-bottom: 20px;
+      }
+
+      h2.map {
+          margin-top: 50px;
+      }
+
+      .btn-light {
+          margin-left: 10px;
+      }
+      .img{
+        height: 120px;
+        width: 240px;
+    }
+    </style>
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
+        <a class="navbar-brand logo" href="{% url 'index' %}">Language Learning</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <button class="btn btn-light">Login</button>
+              <button class="btn btn-light">Register</button>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Languages
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">spanish</a>
+                <a class="dropdown-item" href="#">Hindi</a>
+                <a class="dropdown-item" href="#">English</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="{}">More Languages</a>
+              </div>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+
+      <div class="backgrounds">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-12">
+            <h2 class="mt-5 map">World Wide Famous Languages</h2>
+            <div class="d-flex flex-wrap">
+              <a href="{% url 'course1' %}">
+                <div class="carder mb-3 mr-3">
+                  <h3 class="text-dark">Learn Spanish</h3>
+                 
+                  <p>Spain</p>
+                  <img src="https://imgs.search.brave.com/tR9DBiRTUO5IMvzcluwgCU2CaWAC5095rMU05rpyxZc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzAxLzY5LzUxLzA1/LzM2MF9GXzE2OTUx/MDUzOF9TT0VMZXZB/M3pQeEVIWW16c3o5/N3hPWUVFdjk0RlNY/WS5qcGc" class="img"/>
+                </div>
+              </a>
+              <a href="{% url 'course2' %}">
+                <div class="carder mb-3 mr-3">
+                  <h3 class="text-dark">Learn Japanese</h3>
+                 
+                  <p>Japan</p> 
+                   <img src="https://imgs.search.brave.com/CZPtYD2VSZQtZn3FK4p5z9stQc7H_jH8x4cM4VeRtoo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzAwLzAxLzA4LzQ4/LzM2MF9GXzEwODQ4/MzJfWUVGR0huZlk0/Sm9xRGpiN01zdGw4/MU91SUpwTE1zLmpw/Zw" class="img"/>
+                </div>
+              </a>
+              <a href="{% url 'course3' %}">
+                <div class="carder mb-3 mr-3">
+                  <h3 class="text-dark">Learn English</h3>
+                  <p>USA</p>
+                  <img src="https://imgs.search.brave.com/jnvObxTHML9k766TaLteYR3iUqegz_z3CQCkx079lL0/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzAxLzEyLzQ2Lzc1/LzM2MF9GXzExMjQ2/NzUzNF85amFDWlpS/QUVNc0ljSUNjNUF6/ME5TWDdSZW5JQUt3/OS5qcGc" alt="" class="img"/>
+                  
+                </div>
+              </a>
+              <a href="{% url 'course4' %}">
+                <div class="carder mb-3 mr-3">
+                  <h3 class="text-dark">Learn French</h3>
+                  <p>France</p>
+                  <img src="https://imgs.search.brave.com/Ti_Gidj49tqcSPOdd6pMQ1tcULBx82IS2znRCSCCa44/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/YnJpdGFubmljYS5j/b20vODIvNjgyLTAw/NC1GMEI0N0ZDQi9G/bGFnLUZyYW5jZS5q/cGc" alt="" class="img"/>
+                </div>
+              </a>
+              <a href="{% url 'course5' %}">
+                <div class="carder mb-3 mr-3">
+                  <h3 class="text-dark">Learn Mandarin</h3>
+                  <p>China</p>
+                  <img src="https://imgs.search.brave.com/kCkpPT6HYv_nm6rdyTZktSAQSfJP_dNqAh0oeWO_NQ8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/YnJpdGFubmljYS5j/b20vOTAvNzQ5MC0w/MDQtQkFENEFBNzIv/RmxhZy1DaGluYS5q/cGc" alt="" class="img"/>
+                </div>
+              </a>
+              <a href="{% url 'course6' %}">
+                <div class="carder mb-3 mr-3">
+                  <h3 class="text-dark">Learn Russian</h3>
+                  <p>Russia</p>
+                  <img src="https://imgs.search.brave.com/7LsWeBSRx6qLB2NCEEwMv50n2gUZuuY4Ijy2PVvXqvw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTEy/OTg1NzQ0My9waG90/by9ydXNzaWEtZmxh/Zy5qcGc_cz02MTJ4/NjEyJnc9MCZrPTIw/JmM9cktJNzBZeUxy/anpVTnR5ZWFldzRR/SU16ZW9SQkZnOEZ2/MGtCaWJmdndwOD0" alt="" class="img"/>
+                </div>
+              </a>
+              <a href="{% url 'course7' %}">
+                <div class="carder mb-3 mr-3">
+                  <h3 class="text-dark">Learn Arabic</h3>
+                  <p>Saudi Arabia</p>
+                  <img src="https://imgs.search.brave.com/g5oWrJuShf7e5RMxuVjzXONn2GEEdEBpsvQH63rmITM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/YnJpdGFubmljYS5j/b20vNzkvNTc3OS0w/MDQtREM0Nzk1MDgv/RmxhZy1TYXVkaS1B/cmFiaWEuanBn" alt="" class="img"/>
+                </div>
+              </a>
+              <a href="{% url 'course8' %}">
+                <div class="carder mb-3 mr-3">
+                  <h3 class="text-dark">Learn German</h3>
+                  <p>Germany</p>
+                  <img src="https://imgs.search.brave.com/MGVKFvBXuxtpbzWUlj_3PZn0EAqkOENVJ3oyNS0yATk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAxNi8x/MC8zMC8xNy8zOS9n/ZXJtYW55LWZsYWct/MTc4Mzc3NF9fMzQw/LnBuZw" alt="" class="img"/>
+                </div>
+              </a>
+              <a href="{% url 'course9' %}">
+                <div class="carder mb-3 mr-3">
+                  <h3 class="text-dark">Learn Portuguese</h3>
+                  <p>Portugal</p>
+                  <img src="https://imgs.search.brave.com/83sACxf71yao5dGGkSUmQ0PjhmZ4Wau1aNyl0bW8NTk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzAwLzAzLzg3Lzc0/LzM2MF9GXzM4Nzc0/MzJfVlBYbWdiYXJw/YlhTZ0V0REdtZllw/eEI1S0VMZkc0bGMu/anBn" alt="" class="img"/>
+                </div>
+              </a>
+              <a href="{% url 'course10' %}">
+                <div class="carder mb-3 mr-3">
+                  <h3 class="text-dark">Learn Italian</h3>
+                  <p>Italy</p>
+                  <img src="https://imgs.search.brave.com/upkRM0JDjcHLllINHqiOgGTlySmJ7OoCdsSt4XM0iE8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/YnJpdGFubmljYS5j/b20vNTkvMTc1OS0w/MDQtRjQxNzU0NjMv/RmxhZy1JdGFseS5q/cGc" alt="" class="img">
+                </div>
+              </a>
+              <a href="{% url 'course11' %}">
+                <div class="carder mb-3 mr-3">
+                  <h3 class="text-dark">Learn Hindi</h3>
+                  <p>India</p>
+                  <img src="https://imgs.search.brave.com/hlmoQK1aOcV4z-z2lTbNkp48_7QOEAladWpgd-wQebg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMjAx/MzIxNzUwNi9waG90/by9mbGFnLW9mLWlu/ZGlhLmpwZz9zPTYx/Mng2MTImdz0wJms9/MjAmYz0yX3VsVWN0/eENxVXk5OGY4Qk1S/NHVjTlkxOTJyM2xi/MnUyOW9PSUZKc1hF/PQ" alt="" class="img"/>
+                </div>
+              </a>
+              <a href="% url 'course12' %}">
+                <div class="carder mb-3 mr-3">
+                  <h3 class="text-dark">Learn Swahili</h3>
+                  <p>Kenya</p>
+                  <img src="https://imgs.search.brave.com/vdd3OAnQQml3x5aub_afWypME65Pofc9RxDh8WVSsAs/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/YnJpdGFubmljYS5j/b20vMTUvMTUtMDA0/LUI1RDZCRjgwL0Zs/YWctS2VueWEuanBn" alt="" class="img">
+                </div>
+              </a>
+              <a href="{% url 'course13' %}">
+                <div class="carder mb-3 mr-3">
+                  <h3 class="text-dark">Learn Korean</h3>
+                  <p>South Korea</p>
+                  <img src="https://imgs.search.brave.com/2L4useSrH9mlNSssPdTMCpulSVMmq-4hBwRWOhQeeTI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/YnJpdGFubmljYS5j/b20vNDkvMTk0OS0w/MDQtODgxODMwMEMv/RmxhZy1Tb3V0aC1L/b3JlYS5qcGc" alt="" class="img">
+                </div>
+              </a>
+              <a href="{% url 'course14' %}">
+                <div class="carder mb-3 mr-3">
+                  <h3 class="text-dark">Learn Turkish</h3>
+                  <p>Turkey</p>
+                  <img src="https://imgs.search.brave.com/7_y2LUdlP1mYuZJ7LGh9wpR6HPAiKWX6SQ92Az0Dtdw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTEy/OTg1NzU4OC9waG90/by90dXJrZXktZmxh/Zy5qcGc_cz02MTJ4/NjEyJnc9MCZrPTIw/JmM9SURFVHJ6T1Fk/SVN0YUpua3Z0SVRI/b2VveWlRX09SQjNu/a2FkOXhSaGhETT0" alt="" class="img">
+                </div>
+              </a>
+              <a href="{% url 'course15' %}">
+                <div class="carder mb-3 mr-3">
+                  <h3 class="text-dark">Learn Dutch</h3>
+                  <p>Netherlands</p>
+                  <img src="https://imgs.search.brave.com/7Y104tR-7VlZsVkR8Y1wMcE2Yh_VRSERSMSpfpiHRmc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/cHJlbWl1bS1waG90/by9mbGFnLW5ldGhl/cmxhbmRzXzQwNjkz/OS00NTU0LmpwZz9z/aXplPTYyNiZleHQ9/anBn" alt="" class="img">
+                </div>
+              </a>
+              <a href="{% url 'course16' %}">
+                <div class="carder mb-3 mr-3">
+                  <h3 class="text-dark">Learn Greek</h3>
+                  <p>Greece</p>
+                  <img src="https://imgs.search.brave.com/FEWn6_kntuB0cfKc-9PJjVRv15TB-0_CebVvt3DtLhw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/YnJpdGFubmljYS5j/b20vNDkvMTA0OS0w/MDQtQUU0QkFEM0Uv/RmxhZy1HcmVlY2Uu/anBn" alt="" class="img">
+                </div>
+              </a>
+              <a href="{% url 'course17' %}">
+                <div class="carder mb-3 mr-3">
+                  <h3 class="text-dark">Learn Swedish</h3>
+                  <p>Sweden</p>
+                  <img src="https://imgs.search.brave.com/Qhejjwpy3eA-oaFGtbW8AVRatEG6AyHThNFFW1NlW4E/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/YnJpdGFubmljYS5j/b20vMzAvNDUzMC0w/MDQtMUNGMTdFOUMv/RmxhZy1Td2VkZW4u/anBn" alt="" class="img">
+                </div>
+              </a>
+              <a href="{% url 'course18' %}">
+                <div class="carder mb-3 mr-3">
+                  <h3 class="text-dark">Learn Thai</h3>
+                  <p>Thailand</p>
+                  <img src="https://imgs.search.brave.com/lH0zh6nENw_opXlXjUU3e-MM7mhvYYyhguxDvZuoHgc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzAxLzA4Lzg4LzYw/LzM2MF9GXzEwODg4/NjAzN181Uk1xUm4w/a2F2ZlZnZkJGZ2VL/V1hkeGxSU2M2bXlj/aS5qcGc" alt="" class="img">
+                </div>
+                </a>
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+                <div class="footer-section pt-5 pb-5 bg-light">
+                  <div class="container">
+                      <div class="row">
+                          <div class="col-12 text-center">
+                              <img src="https://imgs.search.brave.com/CQlAosVleYun15oJd_-IDaSB5NbQn7BX8OokIHSeLjU/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTMw/ODQxNjU3NC92ZWN0/b3IvaC1sZXR0ZXIt/c2hhcGUtbG9nby5q/cGc_cz02MTJ4NjEy/Jnc9MCZrPTIwJmM9/OXJ4TmFlaFVwaDZN/c0kxOVBVbnpMZkxv/bkt2aEdQcEFCQUdh/YmFZczYxMD0" style="height:60px; width:60px;"/>
+                              <h1 class="footer-section-mail-id">languagelearning@gmail.com</h1>
+                              <p class="footer-section-address">KL University.</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+               
+                </body>
+                <script id="messenger-widget-b" src="https://cdn.botpenguin.com/website-bot.js" defer>66e316b4919797409c2b9508,66e31686924f2a03a855b4de</script>
+                                 </html>
+                

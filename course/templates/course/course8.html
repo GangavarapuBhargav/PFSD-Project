@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>German Language Overview</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'course/course1.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .heading {
+            color: white;
+            background-color: #1f5180;
+            padding: 20px;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .content {
+            color: #333;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
+        <a class="navbar-brand logo" href="{% url 'index' %}">Language Learning</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active"><a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a></li>
+                <li class="nav-item">
+                    <button class="btn btn-light" onclick="location.href = '{% url 'login' %}'">Login</button>
+                    <button class="btn btn-light" onclick="location.href = '{% url 'register' %}'">Register</button>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">Languages</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">German</a>
+                        <a class="dropdown-item" href="#">Arabic</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="{% url 'languages' %}">More Languages</a>
+                    </div>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="text-center heading">German Language Overview</h1>
+                <div class="content">
+                    <p>
+                        German (Deutsch) is a West Germanic language and the most widely spoken language in the European Union. It is the official language of Germany, Austria, and Switzerland.
+                    </p>
+                    <p>
+                        The German language uses the Latin alphabet and includes some unique characters such as ä, ö, ü, and ß. The pronunciation can be challenging but is relatively straightforward compared to some other languages.
+                    </p>
+                    <p>
+                        German grammar includes a system of noun genders (masculine, feminine, and neuter), case endings, and verb conjugations, which can be complex but offer a logical structure.
+                    </p>
+                    <p>
+                        German literature is rich with influential authors like Johann Wolfgang von Goethe, Friedrich Schiller, and Thomas Mann, whose works have shaped Western thought and culture.
+                    </p>
+                    <p>
+                        Understanding German can enhance career opportunities, especially in engineering, science, and international business, as Germany is a leader in these fields.
+                    </p>
+                    <p>
+                        In conclusion, learning German opens doors to understanding a rich cultural heritage and provides valuable skills in a globalized world.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex flex-row m-5 justify-content-between">
+        <button class="btn btn-outline-success" onclick="location.href='{% url 'quiz1' %}'">Attempt Quiz</button>
+        <button class="btn btn-outline-danger" onclick="location.href='{% url 'languages' %}'">Back</button>
+    </div>
+</body>
+</html>

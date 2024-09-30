@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Vocabulary Quiz</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .quiz-container {
+            margin: 20px;
+        }
+        .question {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container quiz-container">
+        <h1 class="text-center">English Vocabulary Quiz</h1>
+        <form>
+            <div class="question">
+                1. What is "cat" in English?
+                <div>
+                    <label><input type="radio" name="q1" value="a"> a) Dog</label><br>
+                    <label><input type="radio" name="q1" value="b"> b) Cat</label><br>
+                    <label><input type="radio" name="q1" value="c"> c) Bird</label>
+                </div>
+            </div>
+            <!-- Add more questions for English vocabulary -->
+            <button type="submit" class="btn btn-primary">Submit Quiz</button>
+            <button class="btn btn-outline-danger" onclick="location.href='quiz-selection.html'">Back</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn English</title>
+    <style>
+        body {
+            background-image:url('https://res.cloudinary.com/dlpitkw7i/image/upload/v1726503917/hi_wzfrru.png');
+           background-size: cover;
+           background-position: center;
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f0f0f0;
+        }
+        h1, h2 {
+            color: #4CAF50;
+        }
+        p, li {
+            color: #333;
+        }
+        .vocabulary, .grammar, .phrases {
+            margin-bottom: 20px;
+        }
+        .quiz {
+            margin-top: 30px;
+        }
+        .quiz button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .quiz button:hover {
+            background-color: #45a049;
+        }
+        .result {
+            margin-top: 15px;
+            color: blue;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow fixed-top">
+        <a class="navbar-brand logo" href="{% url 'index' %}">Language Learning</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <button class="btn btn-light" onclick="location.href = '{% url 'login' %}'">Login</button>
+              <button class="btn btn-light" onclick="location.href = '{% url 'register' %}'">Register</button>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Languages
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">English</a>
+                <a class="dropdown-item" href="#">Spanish</a>
+                <a class="dropdown-item" href="#">Japanese</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="{% url 'languages' %}">More Languages</a>
+              </div>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+    </nav>
+
+    <h1>Learn English</h1>
+
+    <!-- Introduction to English -->
+    <section class="intro">
+        <p>English is a global language spoken by millions of people around the world. Learning it can help in communication, travel, business, and understanding various cultures.</p>
+        <p>English uses the Latin alphabet, and its vocabulary is a mix of many languages. Start learning English today and explore a world of opportunities!</p>
+    </section>
+
+    <!-- English Vocabulary Section -->
+    <section class="vocabulary">
+        <h2>Basic Vocabulary</h2>
+        <ul>
+            <li><strong>Hello</strong> - A greeting</li>
+            <li><strong>Goodbye</strong> - A farewell</li>
+            <li><strong>Thank you</strong> - An expression of gratitude</li>
+            <li><strong>Please</strong> - A polite request</li>
+            <li><strong>Excuse me</strong> - Used to get attention or apologize</li>
+            <li><strong>Friend</strong> - A person you know well and like</li>
+        </ul>
+    </section>
+
+    <!-- English Grammar Section -->
+    <section class="grammar">
+        <h2>Basic Grammar</h2>
+        <p>In English, sentences follow a Subject-Verb-Object structure. For example, "I go to school" means the same as "私は学校に行きます。" in Japanese.</p>
+        <ul>
+            <li><strong>I</strong> - The subject (私)</li>
+            <li><strong>Go</strong> - The action (行きます)</li>
+        </ul>
+        <p>In English, verbs change based on tense. For example, "go" becomes "went" in the past.</p>
+    </section>
+
+    <!-- English Phrases Section -->
+    <section class="phrases">
+        <h2>Useful Phrases</h2>
+        <ul>
+            <li><strong>How are you?</strong> - A greeting to ask about someone's well-being</li>
+            <li><strong>My name is...</strong> - Used to introduce yourself</li>
+            <li><strong>Where is the bathroom?</strong> - A common question when traveling</li>
+            <li><strong>I don’t understand</strong> - Used when you need clarification</li>
+            <li><strong>Do you speak English?</strong> - A helpful question when in a non-English speaking country</li>
+            <li><strong>I am learning English</strong> - A phrase to use when studying English</li>
+        </ul>
+    </section>
+
+    <!-- Interactive Quiz Section -->
+    <section class="quiz">
+        <h2>Quick Quiz</h2>
+
+        <!-- First Quiz Question -->
+        <p>1. What is the English translation of "ありがとう"?</p>
+        <button onclick="checkAnswer(1, 'a')">Goodbye</button>
+        <button onclick="checkAnswer(1, 'b')">Thank you</button>
+        <button onclick="checkAnswer(1, 'c')">Please</button>
+        <p class="result" id="quiz-result-1"></p>
+
+        <!-- Second Quiz Question -->
+        <p>2. What does "さようなら" mean?</p>
+        <button onclick="checkAnswer(2, 'a')">Friend</button>
+        <button onclick="checkAnswer(2, 'b')">Goodbye</button>
+        <button onclick="checkAnswer(2, 'c')">Hello</button>
+        <p class="result" id="quiz-result-2"></p>
+
+        <!-- Third Quiz Question -->
+        <p>3. How do you say "How are you?" in English?</p>
+        <button onclick="checkAnswer(3, 'a')">Hello</button>
+        <button onclick="checkAnswer(3, 'b')">How are you?</button>
+        <button onclick="checkAnswer(3, 'c')">Thank you</button>
+        <p class="result" id="quiz-result-3"></p>
+
+    </section>
+
+    <!-- JavaScript for quiz functionality -->
+    <script>
+        function checkAnswer(question, answer) {
+            var resultElement = document.getElementById('quiz-result-' + question);
+            if (question === 1 && answer === 'b') {
+                resultElement.textContent = "Correct! 'ありがとう' means 'Thank you'.";
+            } else if (question === 2 && answer === 'b') {
+                resultElement.textContent = "Correct! 'さようなら' means 'Goodbye'.";
+            } else if (question === 3 && answer === 'b') {
+                resultElement.textContent = "Correct! 'お元気ですか' means 'How are you?'.";
+            } else {
+                resultElement.textContent = "Incorrect! Please try again.";
+            }
+        }
+    </script>
+
+</body>
+</html>

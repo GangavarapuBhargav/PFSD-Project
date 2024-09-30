@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hindi Language Overview</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'course/course1.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .heading {
+            color: white;
+            background-color: #1f5180;
+            padding: 20px;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .content {
+            color: #333;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
+        <a class="navbar-brand logo" href="{% url 'index' %}">Language Learning</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active"><a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a></li>
+                <li class="nav-item">
+                    <button class="btn btn-light" onclick="location.href = '{% url 'login' %}'">Login</button>
+                    <button class="btn btn-light" onclick="location.href = '{% url 'register' %}'">Register</button>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">Languages</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Hindi</a>
+                        <a class="dropdown-item" href="{% url 'languages' %}">More Languages</a>
+                    </div>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="text-center heading">Hindi Language Overview</h1>
+                <div class="content">
+                    <p>
+                        Hindi (हिन्दी) is an Indo-Aryan language spoken mainly in India and parts of Nepal. It is the official language of India, alongside English.
+                    </p>
+                    <p>
+                        Hindi is written in the Devanagari script, which consists of 11 vowels and 33 consonants. The language is known for its rich literary heritage.
+                    </p>
+                    <p>
+                        Hindi grammar includes noun genders, verb conjugations, and postpositions, making it structurally similar to other Indo-Aryan languages like Sanskrit.
+                    </p>
+                    <p>
+                        Learning Hindi provides access to Indian culture, including its Bollywood cinema, classical music, and spirituality.
+                    </p>
+                    <p>
+                        In conclusion, Hindi is an important language for global communication and offers insight into one of the world's oldest civilizations.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex flex-row m-5 justify-content-between">
+        <button class="btn btn-outline-success" onclick="location.href='{% url 'quiz_hindi' %}'">Attempt Quiz</button>
+        <button class="btn btn-outline-danger" onclick="location.href='{% url 'languages' %}'">Back</button>
+    </div>
+</body>
+</html>

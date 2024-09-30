@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ภาษาเยอรมัน</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/d50c8cbce8.js" crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin-top: 70px; /* เพิ่มพื้นที่สำหรับแถบเมนู */
+            background-color: #f0f0f0;
+            direction: rtl; /* ภาษาอาหรับเป็นภาษาที่เขียนจากขวาไปซ้าย */
+        }
+        h1, h2 {
+            color: #4CAF50;
+        }
+        p, li {
+            color: #333;
+        }
+        .vocabulary, .grammar, .phrases {
+            margin-bottom: 20px;
+        }
+        .navbar-brand {
+            font-weight: bold;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow fixed-top">
+        <a class="navbar-brand logo" href="{% url 'index' %}">เรียนภาษา</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">หน้าแรก<span class="sr-only">(ปัจจุบัน)</span></a>
+            </li>
+            <li class="nav-item">
+              <button class="btn btn-light" onclick="location.href = '{% url 'login' %}'">เข้าสู่ระบบ</button>
+              <button class="btn btn-light" onclick="location.href = '{% url 'register' %}'">สมัครสมาชิก</button>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                ภาษา
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">ภาษาอังกฤษ</a>
+                <a class="dropdown-item" href="#">ภาษาสเปน</a>
+                <a class="dropdown-item" href="#">ภาษาญี่ปุ่น</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="{% url 'languages' %}">ภาษาเพิ่มเติม</a>
+              </div>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="ค้นหา" aria-label="ค้นหา">
+            <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">ค้นหา</button>
+          </form>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>เรียนภาษาเยอรมัน</h1>
+
+        <!-- บทนำภาษาเยอรมัน -->
+        <section class="intro">
+            <p>ภาษาเยอรมันเป็นภาษาที่มีผู้พูดหลายล้านคนในยุโรป โดยเฉพาะในประเทศเยอรมนี ออสเตรีย และสวิตเซอร์แลนด์ การเรียนภาษาเยอรมันจะเปิดโอกาสใหม่ๆ ไม่ว่าจะเพื่อการท่องเที่ยวหรือทำงาน</p>
+            <p>อักษรเยอรมันใช้ตัวอักษรละติน และเป็นหนึ่งในภาษาที่สำคัญที่สุดในยุโรปและเศรษฐกิจระหว่างประเทศ</p>
+        </section>
+
+        <!-- ส่วนคำศัพท์พื้นฐานภาษาเยอรมัน -->
+        <section class="vocabulary">
+            <h2>คำศัพท์พื้นฐาน</h2>
+            <ul>
+                <li><strong>Hallo</strong> - สวัสดี</li>
+                <li><strong>Auf Wiedersehen</strong> - ลาก่อน</li>
+                <li><strong>Danke</strong> - ขอบคุณ</li>
+                <li><strong>Bitte</strong> - ได้โปรด</li>
+                <li><strong>Entschuldigung</strong> - ขอโทษ</li>
+                <li><strong>Freund</strong> - เพื่อน</li>
+            </ul>
+        </section>
+
+        <!-- ส่วนไวยากรณ์พื้นฐานภาษาเยอรมัน -->
+        <section class="grammar">
+            <h2>ไวยากรณ์พื้นฐาน</h2>
+            <p>ประโยคภาษาเยอรมันมักมีโครงสร้างตามลำดับ ประธาน-กริยา-กรรม ตัวอย่างเช่น "Ich gehe zur Schule" แปลว่า "ฉันไปโรงเรียน"</p>
+            <ul>
+                <li><strong>Ich</strong> - ฉัน</li>
+                <li><strong>gehe</strong> - ไป</li>
+            </ul>
+            <p>คำกริยาในภาษาเยอรมันจะแปรเปลี่ยนตามกาลและบุคคล ตัวอย่างเช่น "Ich gehe" ในอดีตจะเปลี่ยนเป็น "Ich ging" ซึ่งหมายถึง "ไปแล้ว"</p>
+        </section>
+
+        <!-- ส่วนวลีที่มีประโยชน์ภาษาเยอรมัน -->
+        <section class="phrases">
+            <h2>วลีที่มีประโยชน์</h2>
+            <ul>
+                <li><strong>Wie geht's?</strong> - สบายดีไหม?</li>
+                <li><strong>Mein Name ist…</strong> - ฉันชื่อ...</li>
+                <li><strong>Wo ist die Toilette?</strong> - ห้องน้ำอยู่ที่ไหน?</li>
+                <li><strong>Ich verstehe nicht</strong> - ฉันไม่เข้าใจ</li>
+                <li><strong>Sprechen Sie Englisch?</strong> - คุณพูดภาษาอังกฤษได้ไหม?</li>
+                <li><strong>Ich lerne Deutsch</strong> - ฉันกำลังเรียนภาษาเยอรมัน</li>
+            </ul>
+        </section>
+    </div>
+</body>
+</html>

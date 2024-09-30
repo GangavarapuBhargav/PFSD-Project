@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Russian Vocabulary Quiz</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .quiz-container {
+            margin: 20px;
+        }
+        .question {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container quiz-container">
+        <h1 class="text-center">Russian Vocabulary Quiz</h1>
+        <form>
+            <div class="question">
+                1. What is "hello" in Russian?
+                <div>
+                    <label><input type="radio" name="q1" value="a"> a) Пока</label><br>
+                    <label><input type="radio" name="q1" value="b"> b) Привет</label><br>
+                    <label><input type="radio" name="q1" value="c"> c) Спасибо</label>
+                </div>
+            </div>
+            <div class="question">
+                2. What is "thank you" in Russian?
+                <div>
+                    <label><input type="radio" name="q2" value="a"> a) Пожалуйста</label><br>
+                    <label><input type="radio" name="q2" value="b"> b) Спасибо</label><br>
+                    <label><input type="radio" name="q2" value="c"> c) Извините</label>
+                </div>
+            </div>
+            <!-- Add other questions similarly -->
+            <button type="submit" class="btn btn-primary">Submit Quiz</button>
+        </form>
+    </div>
+</body>
+</html>

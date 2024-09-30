@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japanese Quiz</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/d50c8cbce8.js" crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            color: #4CAF50;
+        }
+        p, label {
+            color: #333;
+        }
+        .quiz {
+            margin-top: 30px;
+        }
+        .quiz button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .result {
+            margin-top: 15px;
+            color: blue;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Japanese Language Quiz</h1>
+
+<form method="POST">
+    {% csrf_token %}
+    
+    <div class="quiz">
+        <p>1. What is the English translation of 'ありがとう'?</p>
+        <label><input type="radio" name="answer" value="a"> Goodbye</label><br>
+        <label><input type="radio" name="answer" value="b"> Thank you</label><br>
+        <label><input type="radio" name="answer" value="c"> Please</label><br>
+        <input type="hidden" name="question" value="1">
+        <button type="submit">Submit</button>
+    </div>
+
+    <div class="quiz">
+        <p>2. What does 'さようなら' mean?</p>
+        <label><input type="radio" name="answer" value="a"> Friend</label><br>
+        <label><input type="radio" name="answer" value="b"> Goodbye</label><br>
+        <label><input type="radio" name="answer" value="c"> Hello</label><br>
+        <input type="hidden" name="question" value="2">
+        <button type="submit">Submit</button>
+    </div>
+
+    <div class="quiz">
+        <p>3. How do you say 'お元気ですか' in English?</p>
+        <label><input type="radio" name="answer" value="a"> Hello</label><br>
+        <label><input type="radio" name="answer" value="b"> How are you?</label><br>
+        <label><input type="radio" name="answer" value="c"> Thank you</label><br>
+        <input type="hidden" name="question" value="3">
+        <button type="submit">Submit</button>
+    </div>
+
+    {% if result %}
+    <div class="result">{{ result }}</div>
+    {% endif %}
+</form>
+<button class="btn btn-outline-danger m-3" onclick="location.href = '{% url 'page2' %}'">Back</button>
+</body>
+</html>

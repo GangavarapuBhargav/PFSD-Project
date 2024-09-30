@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Türkçe</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/d50c8cbce8.js" crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin-top: 70px; /* Gezinme çubuğu boşluğu */
+            background-color: #f0f0f0;
+            direction: rtl;
+        }
+        h1, h2 {
+            color: #4CAF50;
+        }
+        p, li {
+            color: #333;
+        }
+        .vocabulary, .grammar, .phrases {
+            margin-bottom: 20px;
+        }
+        .navbar-brand {
+            font-weight: bold;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .intro p, .vocabulary ul li, .grammar p, .phrases ul li {
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow fixed-top">
+        <a class="navbar-brand logo" href="{% url 'index' %}">Dil Öğrenme</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Ana Sayfa<span class="sr-only">(şu an)</span></a>
+            </li>
+            <li class="nav-item">
+              <button class="btn btn-light" onclick="location.href = '{% url 'login' %}'">Giriş Yap</button>
+              <button class="btn btn-light" onclick="location.href = '{% url 'register' %}'">Kayıt Ol</button>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Diller
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">İngilizce</a>
+                <a class="dropdown-item" href="#">İspanyolca</a>
+                <a class="dropdown-item" href="#">Japonca</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="{% url 'languages' %}">Daha Fazla Dil</a>
+              </div>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Ara" aria-label="Ara">
+            <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Ara</button>
+          </form>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Türkçe Öğren</h1>
+
+        <!-- Türkçe Tanıtımı -->
+        <section class="intro">
+            <p>Türkçe, Türkiye ve Kuzey Kıbrıs'ın resmi dilidir. Türkçe öğrenmek, bu bölgelerle iletişimi kolaylaştırır ve iş olanaklarınızı artırır.</p>
+            <p>Türkçe, Latin alfabesi kullanır ve zengin bir kültürel geçmişe sahiptir.</p>
+        </section>
+
+        <!-- Türkçe Temel Kelime Bilgisi -->
+        <section class="vocabulary">
+            <h2>Temel Kelime Bilgisi</h2>
+            <ul>
+                <li><strong>Merhaba</strong> - <em>Hello</em></li>
+                <li><strong>Hoşça kal</strong> - <em>Goodbye</em></li>
+                <li><strong>Teşekkür ederim</strong> - <em>Thank you</em></li>
+                <li><strong>Lütfen</strong> - <em>Please</em></li>
+                <li><strong>Affedersiniz</strong> - <em>Excuse me</em></li>
+                <li><strong>Arkadaş</strong> - <em>Friend</em></li>
+            </ul>
+        </section>
+
+        <!-- Türkçe Temel Dilbilgisi -->
+        <section class="grammar">
+            <h2>Temel Dilbilgisi</h2>
+            <p>Türkçe cümle yapısı genellikle <em>Özne-Fiil-Nesne</em> şeklindedir. Örneğin, "Okula gidiyorum" İngilizce'de "I am going to school" anlamına gelir.</p>
+            <ul>
+                <li><strong>Ben</strong> - <em>I</em></li>
+                <li><strong>Gidiyorum</strong> - <em>Going</em></li>
+            </ul>
+            <p>Türkçe'de fiiller zamana göre değişir. Örneğin, "Gidiyorum"un geçmiş zamanı "Gittim"dir, bu da "went" anlamına gelir.</p>
+        </section>
+
+        <!-- Türkçe Önemli İfadeler -->
+        <section class="phrases">
+            <h2>Önemli İfadeler</h2>
+            <ul>
+                <li><strong>Nasılsınız?</strong> - <em>How are you?</em></li>
+                <li><strong>Adım...</strong> - <em>My name is...</em></li>
+                <li><strong>Tuvalet nerede?</strong> - <em>Where is the bathroom?</em></li>
+                <li><strong>Anlamadım</strong> - <em>I don’t understand</em></li>
+                <li><strong>İngilizce konuşuyor musunuz?</strong> - <em>Do you speak English?</em></li>
+                <li><strong>Türkçe öğreniyorum</strong> - <em>I am learning Turkish</em></li>
+            </ul>
+        </section>
+    </div>
+</body>
+</html>

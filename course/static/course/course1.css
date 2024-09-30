@@ -1,0 +1,10 @@
+.background-images{
+    background-image: url('https://res.cloudinary.com/dlpitkw7i/image/upload/v1726503917/hi_wzfrru.png');
+    background-size: cover;
+    height: 200vh;
+    width: 100vw;
+}
+p{
+    font-weight: bold;
+    font-size: large;
+}

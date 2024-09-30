@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ελληνικά</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/d50c8cbce8.js" crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin-top: 70px; /* Χώρος για τη μπάρα πλοήγησης */
+            background-color: #f0f0f0;
+            direction: rtl;
+        }
+        h1, h2 {
+            color: #4CAF50;
+        }
+        p, li {
+            color: #333;
+        }
+        .vocabulary, .grammar, .phrases {
+            margin-bottom: 20px;
+        }
+        .navbar-brand {
+            font-weight: bold;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .intro p, .vocabulary ul li, .grammar p, .phrases ul li {
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow fixed-top">
+        <a class="navbar-brand logo" href="{% url 'index' %}">Μάθετε Γλώσσες</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Αρχική<span class="sr-only">(τρέχουσα)</span></a>
+            </li>
+            <li class="nav-item">
+              <button class="btn btn-light" onclick="location.href = '{% url 'login' %}'">Σύνδεση</button>
+              <button class="btn btn-light" onclick="location.href = '{% url 'register' %}'">Εγγραφή</button>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Γλώσσες
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Αγγλικά</a>
+                <a class="dropdown-item" href="#">Ισπανικά</a>
+                <a class="dropdown-item" href="#">Ιαπωνικά</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="{% url 'languages' %}">Περισσότερες Γλώσσες</a>
+              </div>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Αναζήτηση" aria-label="Αναζήτηση">
+            <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Αναζήτηση</button>
+          </form>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Μάθετε Ελληνικά</h1>
+
+        <!-- Εισαγωγή στα Ελληνικά -->
+        <section class="intro">
+            <p>Η Ελληνική γλώσσα είναι η επίσημη γλώσσα της Ελλάδας και της Κύπρου. Μαθαίνοντας Ελληνικά, διευρύνετε τις επικοινωνιακές σας ικανότητες και τις επαγγελματικές σας ευκαιρίες σε αυτές τις περιοχές.</p>
+            <p>Η Ελληνική γλώσσα χρησιμοποιεί το Ελληνικό αλφάβητο, το οποίο έχει μακρά ιστορία και είναι η βάση για πολλά άλλα αλφάβητα.</p>
+        </section>
+
+        <!-- Βασικό Λεξιλόγιο στα Ελληνικά -->
+        <section class="vocabulary">
+            <h2>Βασικό Λεξιλόγιο</h2>
+            <ul>
+                <li><strong>Γειά σας (Yia sas)</strong> - <em>Γεια σας</em></li>
+                <li><strong>Αντίο (Antio)</strong> - <em>Αντίο</em></li>
+                <li><strong>Ευχαριστώ (Efharisto)</strong> - <em>Thank you</em></li>
+                <li><strong>Παρακαλώ (Parakalo)</strong> - <em>Please</em></li>
+                <li><strong>Συγγνώμη (Signomi)</strong> - <em>Excuse me/Sorry</em></li>
+                <li><strong>Φίλος (Filos)</strong> - <em>Friend</em></li>
+            </ul>
+        </section>
+
+        <!-- Βασική Γραμματική στα Ελληνικά -->
+        <section class="grammar">
+            <h2>Βασική Γραμματική</h2>
+            <p>Η δομή των προτάσεων στα Ελληνικά είναι γενικά <em>Υποκείμενο-ρήμα-αντικείμενο</em>. Για παράδειγμα, "Πηγαίνω στο σχολείο" σημαίνει στα Αγγλικά "I am going to school".</p>
+            <ul>
+                <li><strong>Εγώ (Ego)</strong> - <em>I</em></li>
+                <li><strong>Πηγαίνω (Pigeno)</strong> - <em>Going</em></li>
+            </ul>
+            <p>Τα ρήματα στα Ελληνικά αλλάζουν ανάλογα με το χρόνο και το πρόσωπο. Για παράδειγμα, ο αόριστος του "Πηγαίνω" είναι "Πήγα", που σημαίνει "went".</p>
+        </section>
+
+        <!-- Βασικές Εκφράσεις στα Ελληνικά -->
+        <section class="phrases">
+            <h2>Βασικές Εκφράσεις</h2>
+            <ul>
+                <li><strong>Πώς είστε; (Pos eiste?)</strong> - <em>How are you?</em></li>
+                <li><strong>Το όνομά μου είναι... (To onoma mou einai...)</strong> - <em>My name is...</em></li>
+                <li><strong>Πού είναι η τουαλέτα; (Pou einai i toualeta?)</strong> - <em>Where is the bathroom?</em></li>
+                <li><strong>Δεν καταλαβαίνω (Den katalaveno)</strong> - <em>I don’t understand</em></li>
+                <li><strong>Μιλάτε Αγγλικά; (Milate Agglika?)</strong> - <em>Do you speak English?</em></li>
+                <li><strong>Μαθαίνω Ελληνικά (Mathaino Ellinika)</strong> - <em>I am learning Greek</em></li>
+            </ul>
+        </section>
+    </div>
+</body>
+</html>

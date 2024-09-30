@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japanese Language Overview</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'course/course1.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .heading {
+            color: white;
+            background-color: #1f5180;
+            padding: 20px;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .content {
+            color: #333;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
+        <a class="navbar-brand logo" href="{% url 'index' %}">Language Learning</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active"><a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a></li>
+                <li class="nav-item">
+                    <button class="btn btn-light" onclick="location.href = '{% url 'login' %}'">Login</button>
+                    <button class="btn btn-light" onclick="location.href = '{% url 'register' %}'">Register</button>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">Languages</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">English</a>
+                        <a class="dropdown-item" href="#">Japanese</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">More Languages</a>
+                    </div>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="text-center heading">Japanese Language Overview</h1>
+                <div class="content">
+                    <p>
+                        Japanese (日本語) is an East Asian language spoken primarily in Japan. It is characterized by its unique writing system, which includes kanji (characters derived from Chinese), hiragana, and katakana.
+                    </p>
+                    <p>
+                        The language is known for its rich vocabulary, influenced by various dialects and cultural exchanges. Japanese grammar is agglutinative, meaning that it uses affixes to express grammatical relationships.
+                    </p>
+                    <p>
+                        Japanese culture, including literature, art, and traditions, deeply influences the language. Learning Japanese allows for a greater appreciation of Japan's cultural heritage and contemporary society.
+                    </p>
+                    <p>
+                        While pronunciation may seem challenging due to pitch accent, the language's syllabic structure can make it easier for learners to grasp the basics. Mastery of kanji is often the most daunting task for students.
+                    </p>
+                    <p>
+                        Japanese is also the language of renowned literary figures such as Haruki Murakami and Yukio Mishima. Their works offer insights into Japanese life and philosophy.
+                    </p>
+                    <p>
+                        Understanding Japanese opens doors to various fields, including technology, business, and entertainment, especially in the context of Japan's influence on global pop culture.
+                    </p>
+                    <p>
+                        In conclusion, learning Japanese not only enhances communication but also fosters a deeper understanding of a rich and vibrant culture.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex flex-row m-5 justify-content-between">
+        <button class="btn btn-outline-success" onclick="location.href='{% url 'quiz1' %}'">Attempt Quiz</button>
+        <button class="btn btn-outline-danger" onclick="location.href='{% url 'languages' %}'">Back</button>
+    </div>
+</body>
+</html>

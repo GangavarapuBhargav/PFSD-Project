@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arabic</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/d50c8cbce8.js" crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin-top: 70px; /* Adding space for the fixed navbar */
+            background-color: #f0f0f0;
+            direction: rtl; /* Arabic is a right-to-left language */
+        }
+        h1, h2 {
+            color: #4CAF50;
+        }
+        p, li {
+            color: #333;
+        }
+        .vocabulary, .grammar, .phrases {
+            margin-bottom: 20px;
+        }
+        .navbar-brand {
+            font-weight: bold;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow fixed-top">
+        <a class="navbar-brand logo" href="{% url 'index' %}">Language Learning</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <button class="btn btn-light" onclick="location.href = '{% url 'login' %}'">Login</button>
+              <button class="btn btn-light" onclick="location.href = '{% url 'register' %}'">Register</button>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Languages
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">English</a>
+                <a class="dropdown-item" href="#">Spanish</a>
+                <a class="dropdown-item" href="#">Japanese</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="{% url 'languages' %}">More Languages</a>
+              </div>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+    </nav>
+    <div class="container">
+        <h1>تعلم اللغة العربية</h1>
+
+        <!-- Introducción al Árabe -->
+        <section class="intro">
+            <p>اللغة العربية هي واحدة من أكثر اللغات تحدثاً حول العالم، وتستخدمها ملايين الناس في الشرق الأوسط وشمال أفريقيا. تعلم العربية سيمنحك فهماً أعمق للثقافة العربية وسيكون مفيداً في السفر أو العمل.</p>
+            <p>اللغة العربية تستخدم نظام كتابة يعتمد على الحروف العربية. تعلم اللغة العربية سيفتح لك أبواباً جديدة من الفرص!</p>
+        </section>
+
+        <!-- Sección de Vocabulario en Árabe -->
+        <section class="vocabulary">
+            <h2>المفردات الأساسية</h2>
+            <ul>
+                <li><strong>مرحبا</strong> - Hello</li>
+                <li><strong>مع السلامة</strong> - Goodbye</li>
+                <li><strong>شكراً</strong> - Thank you</li>
+                <li><strong>من فضلك</strong> - Please</li>
+                <li><strong>عذراً</strong> - Excuse me</li>
+                <li><strong>صديق</strong> - Friend</li>
+            </ul>
+        </section>
+
+        <!-- Sección de Gramática Árabe -->
+        <section class="grammar">
+            <h2>قواعد اللغة الأساسية</h2>
+            <p>الجمل في اللغة العربية غالباً ما تتبع ترتيب الفاعل-الفعل-المفعول به. على سبيل المثال، "أنا أذهب إلى المدرسة" يقابلها "I go to school".</p>
+            <ul>
+                <li><strong>أنا</strong> - I</li>
+                <li><strong>أذهب</strong> - Go</li>
+            </ul>
+            <p>الأفعال في اللغة العربية تتغير بناءً على الزمن. على سبيل المثال، "أذهب" يتغير إلى "ذهبت" في الماضي، والذي يعني "went".</p>
+        </section>
+
+        <!-- Sección de Frases en Árabe -->
+        <section class="phrases">
+            <h2>عبارات مفيدة</h2>
+            <ul>
+                <li><strong>كيف حالك؟</strong> - How are you?</li>
+                <li><strong>اسمي هو…</strong> - My name is...</li>
+                <li><strong>أين الحمام؟</strong> - Where is the bathroom?</li>
+                <li><strong>لا أفهم</strong> - I don’t understand</li>
+                <li><strong>هل تتحدث الإنجليزية؟</strong> - Do you speak English?</li>
+                <li><strong>أنا أتعلم اللغة العربية</strong> - I am learning Arabic</li>
+            </ul>
+        </section>
+    </div>
+</body>
+</html>

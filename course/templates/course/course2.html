@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Language Overview</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'course/course1.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .heading {
+            color: white;
+            background-color: #1f5180;
+            padding: 20px;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .content {
+            color: #333;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
+        <a class="navbar-brand logo" href="{% url 'index' %}">Language Learning</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active"><a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a></li>
+                <li class="nav-item">
+                    <button class="btn btn-light" onclick="location.href = '{% url 'login' %}'">Login</button>
+                    <button class="btn btn-light" onclick="location.href = '{% url 'register' %}'">Register</button>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">Languages</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">English</a>
+                        <a class="dropdown-item" href="#">Spanish</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">More Languages</a>
+                    </div>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="text-center heading">English Language Overview</h1>
+                <div class="content">
+                    <p>
+                        English is a West Germanic language that originated in medieval England. It is the third most spoken language in the world by native speakers and is the primary language in countries such as the United States, the United Kingdom, Canada, Australia, and New Zealand.
+                    </p>
+                    <p>
+                        The English language has a rich vocabulary, influenced by Latin, French, and many other languages. It is known for its flexibility and adaptability, making it a global lingua franca in business, science, technology, and culture.
+                    </p>
+                    <p>
+                        One of the unique features of English is its wide range of dialects and accents, varying significantly across different regions. While grammar rules may seem complex, English tends to have a simpler phonetic structure compared to many other languages.
+                    </p>
+                    <p>
+                        English literature boasts a vast array of works from Shakespeare to modern authors, reflecting the cultural diversity of English-speaking countries. Proficiency in English opens doors to understanding a rich literary heritage and contemporary media.
+                    </p>
+                    <p>
+                        As the global language of business and technology, English proficiency is highly valued in the job market. Many companies seek employees who can communicate effectively in English, making it an essential language for professional growth.
+                    </p>
+                    <p>
+                        Learning English not only enhances career opportunities but also allows for meaningful connections with people from diverse backgrounds, fostering a greater understanding of different cultures.
+                    </p>
+                    <p>
+                        In conclusion, learning English is a gateway to numerous opportunities, both personally and professionally. Whether you're traveling, studying, or working, English provides access to a world of experiences and connections.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex flex-row m-5 justify-content-between">
+        <button class="btn btn-outline-success" onclick="location.href='{% url 'quiz1' %}'">Attempt Quiz</button>
+        <button class="btn btn-outline-danger" onclick="location.href='{% url 'languages' %}'">Back</button>
+    </div>
+</body>
+</html>

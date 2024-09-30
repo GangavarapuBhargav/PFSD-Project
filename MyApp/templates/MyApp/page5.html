@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中文</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
+integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+   <script src="https://kit.fontawesome.com/d50c8cbce8.js" crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            background-image:url('https://res.cloudinary.com/dlpitkw7i/image/upload/v1726503917/hi_wzfrru.png');
+           background-size: cover;
+           background-position: center;
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f0f0f0;
+        }
+        h1, h2 {
+            color: #4CAF50;
+        }
+        p, li {
+            color: #333;
+        }
+        .vocabulary, .grammar, .phrases {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow fixed-top">
+        <a class="navbar-brand logo" href="{% url 'index' %}">Language Learning</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <button class="btn btn-light" onclick="location.href = '{% url 'login' %}'">Login</button>
+              <button class="btn btn-light" onclick="location.href = '{% url 'register' %}'">Register</button>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Languages
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">English</a>
+                <a class="dropdown-item" href="#">Spanish</a>
+                <a class="dropdown-item" href="#">Japanese</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="{% url 'languages' %}">More Languages</a>
+              </div>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+    </nav>
+    
+    <h1>学习中文</h1>
+
+    <!-- 中文介绍 -->
+    <section class="intro">
+        <p>中文是世界上最广泛使用的语言之一，拥有超过十亿的母语使用者。学习中文将为您打开通往新文化的大门，并在旅行或商务中派上用场。</p>
+        <p>中文使用基于汉字的书写系统。学习中文将使您能够探索充满机会的新世界！</p>
+    </section>
+
+    <!-- 中文基本词汇部分 -->
+    <section class="vocabulary">
+        <h2>基本词汇</h2>
+        <ul>
+            <li><strong>你好</strong> - Hello</li>
+            <li><strong>再见</strong> - Goodbye</li>
+            <li><strong>谢谢</strong> - Thank you</li>
+            <li><strong>请</strong> - Please</li>
+            <li><strong>对不起</strong> - Excuse me</li>
+            <li><strong>朋友</strong> - Friend</li>
+        </ul>
+    </section>
+
+    <!-- 中文基础语法部分 -->
+    <section class="grammar">
+        <h2>基本语法</h2>
+        <p>在中文中，句子通常遵循主语-谓语-宾语的顺序。例如，“我去学校”对应于“I go to school”。</p>
+        <ul>
+            <li><strong>我</strong> - I</li>
+            <li><strong>去</strong> - Go</li>
+        </ul>
+        <p>中文动词根据时态变化。例如，“去”在过去时变为“去了”，意思是“went”。</p>
+    </section>
+
+    <!-- 中文常用句子部分 -->
+    <section class="phrases">
+        <h2>实用句子</h2>
+        <ul>
+            <li><strong>你好吗？</strong> - How are you?</li>
+            <li><strong>我叫……</strong> - My name is...</li>
+            <li><strong>洗手间在哪里？</strong> - Where is the bathroom?</li>
+            <li><strong>我不明白</strong> - I don’t understand</li>
+            <li><strong>你会说英语吗？</strong> - Do you speak English?</li>
+            <li><strong>我在学习中文</strong> - I am learning Chinese</li>
+        </ul>
+    </section>
+   
+</body>
+</html>

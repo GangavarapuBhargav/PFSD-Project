@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mandarin Vocabulary Quiz</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .quiz-container {
+            margin: 20px;
+        }
+        .question {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container quiz-container">
+        <h1 class="text-center">Mandarin Vocabulary Quiz</h1>
+        <form>
+            <div class="question">
+                1. What is "hello" in Mandarin?
+                <div>
+                    <label><input type="radio" name="q1" value="a"> a) 再见 (zàijiàn)</label><br>
+                    <label><input type="radio" name="q1" value="b"> b) 你好 (nǐ hǎo)</label><br>
+                    <label><input type="radio" name="q1" value="c"> c) 谢谢 (xièxiè)</label>
+                </div>
+            </div>
+
+            <div class="question">
+                2. What is "thank you" in Mandarin?
+                <div>
+                    <label><input type="radio" name="q2" value="a"> a) 对不起 (duìbuqǐ)</label><br>
+                    <label><input type="radio" name="q2" value="b"> b) 谢谢 (xièxiè)</label><br>
+                    <label><input type="radio" name="q2" value="c"> c) 请 (qǐng)</label>
+                </div>
+            </div>
+
+            <div class="question">
+                3. What is "apple" in Mandarin?
+                <div>
+                    <label><input type="radio" name="q3" value="a"> a) 苹果 (píngguǒ)</label><br>
+                    <label><input type="radio" name="q3" value="b"> b) 梨 (lí)</label><br>
+                    <label><input type="radio" name="q3" value="c"> c) 葡萄 (pútáo)</label>
+                </div>
+            </div>
+
+            <!-- More questions can be added here similar to the original quiz -->
+
+            <button type="submit" class="btn btn-primary">Submit Quiz</button>
+            <button class="btn btn-outline-danger" onclick="location.href='{% url 'course1' %}'">back</button>
+        </form>
+    </div>
+</body>
+</html>

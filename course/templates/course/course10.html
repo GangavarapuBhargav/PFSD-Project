@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Italian Language Overview</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'course/course1.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .heading {
+            color: white;
+            background-color: #1f5180;
+            padding: 20px;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .content {
+            color: #333;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
+        <a class="navbar-brand logo" href="{% url 'index' %}">Language Learning</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active"><a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a></li>
+                <li class="nav-item">
+                    <button class="btn btn-light" onclick="location.href = '{% url 'login' %}'">Login</button>
+                    <button class="btn btn-light" onclick="location.href = '{% url 'register' %}'">Register</button>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">Languages</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Italian</a>
+                        <a class="dropdown-item" href="#">Portuguese</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="{% url 'languages' %}">More Languages</a>
+                    </div>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="text-center heading">Italian Language Overview</h1>
+                <div class="content">
+                    <p>
+                        Italian (italiano) is a Romance language spoken primarily in Italy, Switzerland, San Marino, and the Vatican City. It is known for its melodic and rhythmic qualities.
+                    </p>
+                    <p>
+                        The Italian language uses the Latin alphabet and is known for its clear pronunciation. Each vowel is usually pronounced, making it relatively easy to read and speak.
+                    </p>
+                    <p>
+                        Italian grammar includes noun genders, verb conjugations, and a range of tenses, though its logical structure aids in mastering these elements.
+                    </p>
+                    <p>
+                        Italy has produced a wealth of literary and cultural icons, from Dante Alighieri to Umberto Eco, whose works have significantly impacted the Western world.
+                    </p>
+                    <p>
+                        Knowing Italian can enhance travel experiences in Italy and provide advantages in art, music, and fashion-related fields.
+                    </p>
+                    <p>
+                        In conclusion, learning Italian offers a gateway to a rich cultural heritage and is widely regarded as one of the most beautiful spoken languages in the world.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex flex-row m-5 justify-content-between">
+        <button class="btn btn-outline-success" onclick="location.href='{% url 'quiz1' %}'">Attempt Quiz</button>
+        <button class="btn btn-outline-danger" onclick="location.href='{% url 'languages' %}'">Back</button>
+    </div>
+</body>
+</html>

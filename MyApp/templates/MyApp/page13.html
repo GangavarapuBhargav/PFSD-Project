@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koreaans</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/d50c8cbce8.js" crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin-top: 70px; /* Navigatiebalk ruimte */
+            background-color: #f0f0f0;
+            direction: rtl;
+        }
+        h1, h2 {
+            color: #4CAF50;
+        }
+        p, li {
+            color: #333;
+        }
+        .vocabulary, .grammar, .phrases {
+            margin-bottom: 20px;
+        }
+        .navbar-brand {
+            font-weight: bold;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .intro p, .vocabulary ul li, .grammar p, .phrases ul li {
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow fixed-top">
+        <a class="navbar-brand logo" href="{% url 'index' %}">Taal Leren</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home<span class="sr-only">(huidig)</span></a>
+            </li>
+            <li class="nav-item">
+              <button class="btn btn-light" onclick="location.href = '{% url 'login' %}'">Inloggen</button>
+              <button class="btn btn-light" onclick="location.href = '{% url 'register' %}'">Registreren</button>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Talen
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Engels</a>
+                <a class="dropdown-item" href="#">Spaans</a>
+                <a class="dropdown-item" href="#">Japans</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="{% url 'languages' %}">Meer Talen</a>
+              </div>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Zoeken" aria-label="Zoeken">
+            <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Zoeken</button>
+          </form>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Koreaans Leren</h1>
+
+        <!-- Inleiding Koreaans -->
+        <section class="intro">
+            <p>Koreaans is de officiële taal van Zuid-Korea en Noord-Korea. Door Koreaans te leren, vergroot je je communicatie- en carrièrekansen in deze regio's en krijg je toegang tot een rijke cultuur.</p>
+            <p>Koreaans gebruikt het Hangeul-alfabet, dat bestaat uit 14 medeklinkers en 10 klinkers. Het is een fonetisch alfabet en staat bekend om zijn eenvoud in vergelijking met andere Aziatische schriften.</p>
+        </section>
+
+        <!-- Basiswoordenschat Koreaans -->
+        <section class="vocabulary">
+            <h2>Basiswoordenschat</h2>
+            <ul>
+                <li><strong>안녕하세요 (Annyeonghaseyo)</strong> - <em>Hello</em></li>
+                <li><strong>안녕히 가세요 (Annyeonghi gaseyo)</strong> - <em>Goodbye (to someone leaving)</em></li>
+                <li><strong>감사합니다 (Gamsahamnida)</strong> - <em>Thank you</em></li>
+                <li><strong>제발 (Jebal)</strong> - <em>Please</em></li>
+                <li><strong>죄송합니다 (Joesonghamnida)</strong> - <em>Sorry/Excuse me</em></li>
+                <li><strong>친구 (Chingu)</strong> - <em>Friend</em></li>
+            </ul>
+        </section>
+
+        <!-- Basisgrammatica Koreaans -->
+        <section class="grammar">
+            <h2>Basisgrammatica</h2>
+            <p>De zinsvolgorde in het Koreaans is over het algemeen <em>Onderwerp-voorwerp-werkwoord</em>. Bijvoorbeeld, "저는 학교에 갑니다" betekent in het Engels "I am going to school".</p>
+            <ul>
+                <li><strong>저 (Jeo)</strong> - <em>I</em></li>
+                <li><strong>갑니다 (Gam-nida)</strong> - <em>Going</em></li>
+            </ul>
+            <p>Werkwoorden in het Koreaans veranderen afhankelijk van de beleefdheidsvorm en tijd. Bijvoorbeeld, de verleden tijd van "갑니다" is "갔습니다 (Gatseumnida)", wat "went" betekent.</p>
+        </section>
+
+        <!-- Essentiële Uitdrukkingen Koreaans -->
+        <section class="phrases">
+            <h2>Essentiële Uitdrukkingen</h2>
+            <ul>
+                <li><strong>어떻게 지내세요? (Eotteoke jinaeseyo?)</strong> - <em>How are you?</em></li>
+                <li><strong>제 이름은...입니다 (Je ireumeun...imnida)</strong> - <em>My name is...</em></li>
+                <li><strong>화장실 어디에요? (Hwajangsil eodieyo?)</strong> - <em>Where is the bathroom?</em></li>
+                <li><strong>이해하지 못했어요 (Ihae haji mothaesseoyo)</strong> - <em>I don’t understand</em></li>
+                <li><strong>영어 하세요? (Yeongeo haseyo?)</strong> - <em>Do you speak English?</em></li>
+                <li><strong>저는 한국어를 배우고 있어요 (Jeoneun hangugeo-reul baeugo isseoyo)</strong> - <em>I am learning Korean</em></li>
+            </ul>
+        </section>
+    </div>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Svenska</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/d50c8cbce8.js" crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin-top: 70px; /* Navigation bar space */
+            background-color: #f0f0f0;
+        }
+        h1, h2 {
+            color: #4CAF50;
+        }
+        p, li {
+            color: #333;
+        }
+        .vocabulary, .grammar, .phrases {
+            margin-bottom: 20px;
+        }
+        .navbar-brand {
+            font-weight: bold;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .intro p, .vocabulary ul li, .grammar p, .phrases ul li {
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow fixed-top">
+        <a class="navbar-brand logo" href="{% url 'index' %}">Lär Dig Språk</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Hem<span class="sr-only">(aktuellt)</span></a>
+            </li>
+            <li class="nav-item">
+              <button class="btn btn-light" onclick="location.href = '{% url 'login' %}'">Logga In</button>
+              <button class="btn btn-light" onclick="location.href = '{% url 'register' %}'">Registrera</button>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Språk
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Engelska</a>
+                <a class="dropdown-item" href="#">Spanska</a>
+                <a class="dropdown-item" href="#">Japanska</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="{% url 'languages' %}">Fler Språk</a>
+              </div>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Sök" aria-label="Sök">
+            <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Sök</button>
+          </form>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Lär Dig Svenska</h1>
+
+        <!-- Introduktion till Svenska -->
+        <section class="intro">
+            <p>Svenska är det officiella språket i Sverige och ett av de officiella språken i Finland. Genom att lära dig svenska, kan du utöka dina kommunikationsmöjligheter och karriärmöjligheter i dessa regioner.</p>
+            <p>Svenska använder det latinska alfabetet och är känt för sina tydliga uttalsregler.</p>
+        </section>
+
+        <!-- Grundläggande Ordförråd på Svenska -->
+        <section class="vocabulary">
+            <h2>Grundläggande Ordförråd</h2>
+            <ul>
+                <li><strong>Hej</strong> - <em>Hello</em></li>
+                <li><strong>Hejdå</strong> - <em>Goodbye</em></li>
+                <li><strong>Tack</strong> - <em>Thank you</em></li>
+                <li><strong>Snälla</strong> - <em>Please</em></li>
+                <li><strong>Ursäkta</strong> - <em>Sorry/Excuse me</em></li>
+                <li><strong>Vän</strong> - <em>Friend</em></li>
+            </ul>
+        </section>
+
+        <!-- Grundläggande Grammatik på Svenska -->
+        <section class="grammar">
+            <h2>Grundläggande Grammatik</h2>
+            <p>Meningsstrukturen på svenska är vanligtvis <em>Subjekt-Verb-Objekt</em>. Till exempel, "Jag går till skolan" betyder på engelska "I am going to school".</p>
+            <ul>
+                <li><strong>Jag</strong> - <em>I</em></li>
+                <li><strong>Går</strong> - <em>Going</em></li>
+            </ul>
+            <p>Verb på svenska förändras beroende på tid och person. Till exempel, den förflutna formen av "går" är "gick", vilket betyder "went".</p>
+        </section>
+
+        <!-- Viktiga Fraser på Svenska -->
+        <section class="phrases">
+            <h2>Viktiga Fraser</h2>
+            <ul>
+                <li><strong>Hur mår du?</strong> - <em>How are you?</em></li>
+                <li><strong>Mitt namn är...</strong> - <em>My name is...</em></li>
+                <li><strong>Var är toaletten?</strong> - <em>Where is the bathroom?</em></li>
+                <li><strong>Jag förstår inte</strong> - <em>I don’t understand</em></li>
+                <li><strong>Talar du engelska?</strong> - <em>Do you speak English?</em></li>
+                <li><strong>Jag lär mig svenska</strong> - <em>I am learning Swedish</em></li>
+            </ul>
+        </section>
+    </div>
+</body>
+</html>

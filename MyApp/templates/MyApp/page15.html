@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nederlands</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/d50c8cbce8.js" crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin-top: 70px; /* Navigatiebalk ruimte */
+            background-color: #f0f0f0;
+            direction: rtl;
+        }
+        h1, h2 {
+            color: #4CAF50;
+        }
+        p, li {
+            color: #333;
+        }
+        .vocabulary, .grammar, .phrases {
+            margin-bottom: 20px;
+        }
+        .navbar-brand {
+            font-weight: bold;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .intro p, .vocabulary ul li, .grammar p, .phrases ul li {
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow fixed-top">
+        <a class="navbar-brand logo" href="{% url 'index' %}">Taal Leren</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home<span class="sr-only">(huidig)</span></a>
+            </li>
+            <li class="nav-item">
+              <button class="btn btn-light" onclick="location.href = '{% url 'login' %}'">Inloggen</button>
+              <button class="btn btn-light" onclick="location.href = '{% url 'register' %}'">Registreren</button>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Talen
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Engels</a>
+                <a class="dropdown-item" href="#">Spaans</a>
+                <a class="dropdown-item" href="#">Japans</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="{% url 'languages' %}">Meer Talen</a>
+              </div>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Zoeken" aria-label="Zoeken">
+            <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Zoeken</button>
+          </form>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Nederlands Leren</h1>
+
+        <!-- Inleiding Nederlands -->
+        <section class="intro">
+            <p>Nederlands is de officiële taal van Nederland en Vlaanderen in België. Door Nederlands te leren, vergroot je je communicatie- en carrièrekansen in deze regio's.</p>
+            <p>Nederlands gebruikt het Latijnse alfabet en heeft een rijke culturele geschiedenis.</p>
+        </section>
+
+        <!-- Basiswoordenschat Nederlands -->
+        <section class="vocabulary">
+            <h2>Basiswoordenschat</h2>
+            <ul>
+                <li><strong>Hallo</strong> - <em>Hello</em></li>
+                <li><strong>Tot ziens</strong> - <em>Goodbye</em></li>
+                <li><strong>Dank je wel</strong> - <em>Thank you</em></li>
+                <li><strong>Alsjeblieft</strong> - <em>Please</em></li>
+                <li><strong>Pardon</strong> - <em>Excuse me</em></li>
+                <li><strong>Vriend</strong> - <em>Friend</em></li>
+            </ul>
+        </section>
+
+        <!-- Basisgrammatica Nederlands -->
+        <section class="grammar">
+            <h2>Basisgrammatica</h2>
+            <p>De zinsvolgorde in het Nederlands is over het algemeen <em>Onderwerp-werkwoord-voorwerp</em>. Bijvoorbeeld, "Ik ga naar school" betekent in het Engels "I am going to school".</p>
+            <ul>
+                <li><strong>Ik</strong> - <em>I</em></li>
+                <li><strong>Ga</strong> - <em>Going</em></li>
+            </ul>
+            <p>In het Nederlands veranderen werkwoorden afhankelijk van de tijd. Bijvoorbeeld, de verleden tijd van "Ga" is "Ging", wat "went" betekent.</p>
+        </section>
+
+        <!-- Essentiële Uitdrukkingen Nederlands -->
+        <section class="phrases">
+            <h2>Essentiële Uitdrukkingen</h2>
+            <ul>
+                <li><strong>Hoe gaat het?</strong> - <em>How are you?</em></li>
+                <li><strong>Mijn naam is...</strong> - <em>My name is...</em></li>
+                <li><strong>Waar is de wc?</strong> - <em>Where is the bathroom?</em></li>
+                <li><strong>Ik begrijp het niet</strong> - <em>I don’t understand</em></li>
+                <li><strong>Spreek je Engels?</strong> - <em>Do you speak English?</em></li>
+                <li><strong>Ik leer Nederlands</strong> - <em>I am learning Dutch</em></li>
+            </ul>
+        </section>
+    </div>
+</body>
+</html>

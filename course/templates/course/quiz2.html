@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japanese Vocabulary Quiz</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .quiz-container {
+            margin: 20px;
+        }
+        .question {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container quiz-container">
+        <h1 class="text-center">Japanese Vocabulary Quiz</h1>
+        <form>
+            <div class="question">
+                1. What is "hello" in Japanese?
+                <div>
+                    <label><input type="radio" name="q1" value="a"> a) さようなら (Sayonara)</label><br>
+                    <label><input type="radio" name="q1" value="b"> b) こんにちは (Konnichiwa)</label><br>
+                    <label><input type="radio" name="q1" value="c"> c) ありがとう (Arigatou)</label>
+                </div>
+            </div>
+
+            <!-- Add more questions similarly -->
+
+            <button type="submit" class="btn btn-primary">Submit Quiz</button>
+            <button class="btn btn-outline-danger"onclick="location.href='{% url 'course1' %}'">back</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Japanese</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/d50c8cbce8.js" crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            background-image:url('https://res.cloudinary.com/dlpitkw7i/image/upload/v1726503917/hi_wzfrru.png');
+           background-size: cover;
+           background-position: center;
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f0f0f0;
+        }
+        h1, h2 {
+            color: #4CAF50;
+        }
+        p, li {
+            color: #333;
+        }
+        .vocabulary, .grammar, .phrases {
+            margin-bottom: 20px;
+        }
+        .quiz {
+            margin-top: 30px;
+        }
+        .quiz button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .quiz button:hover {
+            background-color: #45a049;
+        }
+        .result {
+            margin-top: 15px;
+            color: blue;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow fixed-top">
+        <a class="navbar-brand logo" href="{% url 'index' %}">Language Learning</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <button class="btn btn-light" onclick="location.href = '{% url 'login' %}'">Login</button>
+              <button class="btn btn-light" onclick="location.href = '{% url 'register' %}'">Register</button>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Languages
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">English</a>
+                <a class="dropdown-item" href="#">Spanish</a>
+                <a class="dropdown-item" href="#">Japanese</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="{% url 'languages' %}">More Languages</a>
+              </div>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+    </nav>
+
+    <h1>日本語を学ぼう (Learn Japanese)</h1>
+
+   
+    <section class="intro">
+        <p>日本語は日本で話されている言語で、約1億2700万人が母国語として話しています。学ぶことで日本文化への理解が深まり、旅行やビジネスの際にも役立ちます。</p>
+        <p>日本語には三つの文字体系があり、ひらがな、カタカナ、そして漢字が使われています。日本語を学んで新しい世界を探検しましょう！</p>
+    </section>
+
+    
+    <section class="vocabulary">
+        <h2>基本語彙 (Basic Vocabulary)</h2>
+        <ul>
+            <li><strong>こんにちは (Konnichiwa)</strong> - こんにちは (Hello)</li>
+            <li><strong>さようなら (Sayounara)</strong> - さようなら (Goodbye)</li>
+            <li><strong>ありがとう (Arigatou)</strong> - ありがとう (Thank you)</li>
+            <li><strong>お願いします (Onegaishimasu)</strong> - お願いします (Please)</li>
+            <li><strong>すみません (Sumimasen)</strong> - すみません (Excuse me)</li>
+            <li><strong>友達 (Tomodachi)</strong> - 友達 (Friend)</li>
+        </ul>
+    </section>
+
+    
+    <section class="grammar">
+        <h2>基本文法 (Basic Grammar)</h2>
+        <p>日本語では、主語、目的語、動詞の順で文を作ります。例えば、「私は学校に行きます。」という文は、「I go to school」に相当します。</p>
+        <ul>
+            <li><strong>私 (Watashi)</strong> - 私 (I)</li>
+            <li><strong>行きます (Ikimasu)</strong> - 行きます (Go)</li>
+        </ul>
+        <p>日本語の動詞は、動作のタイミングによって変化します。例えば、「行きます」は「行った (went)」に変化します。</p>
+    </section>
+
+
+    <section class="phrases">
+        <h2>便利なフレーズ (Useful Phrases)</h2>
+        <ul>
+            <li><strong>お元気ですか (Ogenki desu ka?)</strong> - お元気ですか (How are you?)</li>
+            <li><strong>私の名前は…です (Watashi no namae wa ... desu)</strong> - 私の名前は…です (My name is...)</li>
+            <li><strong>トイレはどこですか (Toire wa doko desu ka?)</strong> - トイレはどこですか (Where is the bathroom?)</li>
+            <li><strong>わかりません (Wakarimasen)</strong> - わかりません (I don’t understand)</li>
+            <li><strong>英語を話せますか (Eigo o hanasemasu ka?)</strong> - 英語を話せますか (Do you speak English?)</li>
+            <li><strong>日本語を勉強しています (Nihongo o benkyou shiteimasu)</strong> - 日本語を勉強しています (I am learning Japanese)</li>
+        </ul>
+    </section>
+    <div class="d-flex flex-row justify-content-between">
+   <button class="btn btn-outline-info" onclick="location.href='{% url 'quiz' %}'">Attempt Quiz</button>
+   <button class="btn btn-outline-danger" onclick="location.href = '{% url 'languages' %}'">back</button>
+</div>
+</body>
+</html> 

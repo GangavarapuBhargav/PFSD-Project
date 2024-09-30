@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spanish</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/d50c8cbce8.js" crossorigin="anonymous"></script>
+
+    <style>
+        body {
+           background-image:url('https://res.cloudinary.com/dlpitkw7i/image/upload/v1726503917/hi_wzfrru.png');
+           background-size: cover;
+           background-position: center;
+            font-family: Arial, sans-serif;
+            margin-top: 70px; /* Adding space for the fixed navbar */
+            background-color: #f0f0f0;
+        }
+        h1, h2 {
+            color: #4CAF50;
+        }
+        p, li {
+            color: #333;
+        }
+        .vocabulary, .grammar, .phrases {
+            margin-bottom: 20px;
+        }
+        .navbar-brand {
+            font-weight: bold;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow fixed-top">
+        <a class="navbar-brand logo" href="{% url 'index' %}">Language Learning</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <button class="btn btn-light" onclick="location.href = '{% url 'login' %}'">Login</button>
+              <button class="btn btn-light" onclick="location.href = '{% url 'register' %}'">Register</button>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Languages
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">English</a>
+                <a class="dropdown-item" href="#">Spanish</a>
+                <a class="dropdown-item" href="#">Japanese</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="{% url 'languages' %}">More Languages</a>
+              </div>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Aprende Español</h1>
+
+        <!-- Introducción al Español -->
+        <section class="intro">
+            <p>El español es el segundo idioma más hablado en el mundo, con más de 500 millones de hablantes nativos. Aprender español te abrirá las puertas a nuevas culturas y te será útil en viajes o negocios.</p>
+            <p>El español utiliza un sistema de escritura basado en el alfabeto latino. ¡Aprender español te permitirá explorar un nuevo mundo lleno de oportunidades!</p>
+        </section>
+
+        <!-- Sección de Vocabulario en Español -->
+        <section class="vocabulary">
+            <h2>Vocabulario Básico</h2>
+            <ul>
+                <li><strong>Hola</strong> - Hello</li>
+                <li><strong>Adiós</strong> - Goodbye</li>
+                <li><strong>Gracias</strong> - Thank you</li>
+                <li><strong>Por favor</strong> - Please</li>
+                <li><strong>Perdón</strong> - Excuse me</li>
+                <li><strong>Amigo</strong> - Friend</li>
+            </ul>
+        </section>
+
+        <!-- Sección de Gramática Española -->
+        <section class="grammar">
+            <h2>Gramática Básica</h2>
+            <p>En español, las oraciones generalmente siguen el orden sujeto-verbo-objeto. Por ejemplo, "Yo voy a la escuela" corresponde a "I go to school".</p>
+            <ul>
+                <li><strong>Yo</strong> - I</li>
+                <li><strong>Voy</strong> - Go</li>
+            </ul>
+            <p>Los verbos en español cambian dependiendo del tiempo. Por ejemplo, "Voy" cambia a "Fui" en pasado, que significa "went".</p>
+        </section>
+
+        <!-- Sección de Frases en Español -->
+        <section class="phrases">
+            <h2>Frases Útiles</h2>
+            <ul>
+                <li><strong>¿Cómo estás?</strong> - How are you?</li>
+                <li><strong>Mi nombre es…</strong> - My name is...</li>
+                <li><strong>¿Dónde está el baño?</strong> - Where is the bathroom?</li>
+                <li><strong>No entiendo</strong> - I don’t understand</li>
+                <li><strong>¿Hablas inglés?</strong> - Do you speak English?</li>
+                <li><strong>Estoy aprendiendo español</strong> - I am learning Spanish</li>
+            </ul>
+        </section>
+    </div>
+</body>
+</html>
