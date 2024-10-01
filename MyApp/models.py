@@ -1,29 +1,32 @@
 from django.db import models
-from django.core.validators import RegexValidator, MaxLengthValidator
+from django.contrib.auth.models import User
+
+class Language(models.Model):
+    name = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.name
 
 class Teacher(models.Model):
-    # Username with up to 6 digits
-    username_validator = RegexValidator(
-        regex=r'^\d{1,6}$', 
-        message="Username must be up to 6 digits."
-    )
-    
-    username = models.CharField(max_length=6, validators=[username_validator], unique=True)
-    first_name = models.CharField(max_length=30)
-    last_name = models.CharField(max_length=30)
-    email = models.EmailField(unique=True)
-    subject = models.CharField(max_length=50)
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    name = models.CharField(max_length=100)
+    language = models.ForeignKey(Language, on_delete=models.CASCADE)
+    streak = models.IntegerField(default=0)
 
     def __str__(self):
-        return f"{self.first_name} {self.last_name} ({self.username})"
-
+        return self.name
 
 class Student(models.Model):
-    # Username can contain letters and digits, length up to 8
-    username = models.CharField(max_length=8, unique=True)
-    first_name = models.CharField(max_length=30)
-    last_name = models.CharField(max_length=30)
-    email = models.EmailField(unique=True)
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    name = models.CharField(max_length=100)
+    language = models.ForeignKey(Language, on_delete=models.CASCADE)
+    streak = models.IntegerField(default=0)
 
     def __str__(self):
-        return f"{self.first_name} {self.last_name} ({self.username})"
+        return self.name
+
+class Assignment(models.Model):
+    title = models.CharField(max_length=255)
+    file = models.FileField(upload_to='assignments/')
+    uploaded_by = models.ForeignKey(User, on_delete=models.CASCADE)
+    due_date = models.DateField()
