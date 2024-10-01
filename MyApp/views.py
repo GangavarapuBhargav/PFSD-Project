@@ -41,95 +41,88 @@ def register(request):
     return render(request, 'MyApp/register.html', {'form': form})
 
 
-@login_required
+
 def languages(request):
     return render(request, 'MyApp/languages.html')
 
 
-@login_required
+
 def page1(request):
     return render(request, 'MyApp/page1.html')
 
-@login_required
+
 def page2(request):
     return render(request, 'MyApp/page2.html')
 
-@login_required
+
 def page3(request):
     return render(request, 'MyApp/page3.html')
 
-@login_required
+
 def page4(request):
     return render(request, 'MyApp/page4.html')
 
-@login_required
+
 def page5(request):
     return render(request, 'MyApp/page5.html')
 
-@login_required
+
 def page6(request):
     return render(request, 'MyApp/page6.html')
 
-@login_required
+
 def page7(request):
     return render(request, 'MyApp/page7.html')
 
-@login_required
+
 def page8(request):
     return render(request, 'MyApp/page8.html')
 
-@login_required
+
 def page9(request):
     return render(request, 'MyApp/page9.html')
 
-@login_required
+
 def page10(request):
     return render(request, 'MyApp/page10.html')
 
-@login_required
+
 def page11(request):
     return render(request, 'MyApp/page11.html')
 
-@login_required
+
 def page12(request):
     return render(request, 'MyApp/page12.html')
 
-@login_required
+
 def page12(request):
     return render(request, 'MyApp/page12.html')
 
-@login_required
+
 def page13(request):
     return render(request, 'MyApp/page13.html')
 
-@login_required
+
 def page14(request):
     return render(request, 'MyApp/page14.html')
 
-@login_required
+
 def page15(request):
     return render(request, 'MyApp/page15.html')
 
-@login_required
+
 def page16(request):
     return render(request, 'MyApp/page16.html')
 
 
-@login_required
+
 def page17(request):
     return render(request, 'MyApp/page17.html')
 
 
-@login_required
+
 def page18(request):
     return render(request, 'MyApp/page18.html')
-
-
-
-
-
-
-
 
 def quiz(request):
     return render(request, 'MyApp/quiz.html')
