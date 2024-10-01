@@ -102,27 +102,34 @@ def page12(request):
 def page13(request):
     return render(request, 'MyApp/page13.html')
 
-
+@login_required
 def page14(request):
     return render(request, 'MyApp/page14.html')
 
-
+@login_required
 def page15(request):
     return render(request, 'MyApp/page15.html')
 
-
+@login_required
 def page16(request):
     return render(request, 'MyApp/page16.html')
 
 
-
+@login_required
 def page17(request):
     return render(request, 'MyApp/page17.html')
 
 
-
+@login_required
 def page18(request):
     return render(request, 'MyApp/page18.html')
+
+
+
+
+
+
+
 
 def quiz(request):
     return render(request, 'MyApp/quiz.html')

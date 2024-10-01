@@ -26,8 +26,6 @@
              <button class="btn btn-light">Login</button>
              <button class="btn btn-light">Register</button>
             </li>
-            
-            
           </ul>
           <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -35,45 +33,59 @@
           </form>
         </div>
       </nav>
-<div class="d-flex justify-content-center align-items-center new-div">
-    <div class="login-box">
-        <h2 class="login-header text">Register</h2>
-        <form method="post">
-            {% csrf_token %}
-            <div class="input-box">
-                <input class="input-field" type="text" name="username" placeholder="Username" required>
+      
+    <div class="d-flex justify-content-center align-items-center new-div">
+        <div class="login-box">
+            <h2 class="login-header text">Register</h2>
+            <form method="post">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="user_type">Register as:</label>
+                    <select id="user_type" name="user_type" class="form-control" required>
+                        <option value="">Select User Type</option>
+                        <option value="teacher">Teacher</option>
+                        <option value="student">Student</option>
+                    </select>
+                </div>
+                <div class="input-box">
+                    <input class="input-field" type="text" name="username" placeholder="Username" required>
+                </div>
+                <div class="input-box">
+                    <input class="input-field" type="text" name="first_name" placeholder="First Name" required>
+                </div>
+                <div class="input-box">
+                    <input class="input-field" type="text" name="last_name" placeholder="Last Name" required>
+                </div>
+                <div class="input-box">
+                    <input class="input-field" type="email" name="email" placeholder="Email" required>
+                </div>
+                <div class="input-box">
+                    <input class="input-field" type="password" name="password1" placeholder="Password" required>
+                </div>
+                <div class="input-box">
+                    <input class="input-field" type="password" name="password2" placeholder="Confirm Password" required>
+                </div>
+                <div class="input-submit">
+                    <button class="submit-btn text-white" type="submit">Register</button>
+                </div>
+            </form>
+            <div class="sign-up-link">
+                <p class="text-dark">Already have an account? <a href="{% url 'login' %}">Login</a></p>
             </div>
-            <div class="input-box">
-                <input class="input-field" type="email" name="email" placeholder="Email" required>
-            </div>
-            <div class="input-box">
-                <input class="input-field" type="password" name="password1" placeholder="Password" required>
-            </div>
-            <div class="input-box">
-                <input class="input-field" type="password" name="password2" placeholder="Confirm Password" required>
-            </div>
-            <div class="input-submit">
-                <button class="submit-btn text-white" type="submit">Register</button>
-            </div>
-        </form>
-        <div class="sign-up-link">
-            <p class="text-dark">Already have an account? <a href="{% url 'login' %}">Login</a></p>
         </div>
     </div>
-</div>
 
-<div class="footer-section pt-5 pb-5 bg-light">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 text-center">
-                <img src="https://imgs.search.brave.com/CQlAosVleYun15oJd_-IDaSB5NbQn7BX8OokIHSeLjU/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTMw/ODQxNjU3NC92ZWN0/b3IvaC1sZXR0ZXIt/c2hhcGUtbG9nby5q/cGc_cz02MTJ4NjEy/Jnc9MCZrPTIwJmM9/OXJ4TmFlaFVwaDZN/c0kxOVBVbnpMZkxv/bkt2aEdQcEFCQUdh/YmFZczYxMD0" style="height:60px; width:60px;"/>
-                <h1 class="footer-section-mail-id">languagelearning@gmail.com</h1>
-                <p class="footer-section-address">KL University.</p>
+    <div class="footer-section pt-5 pb-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <img src="https://imgs.search.brave.com/CQlAosVleYun15oJd_-IDaSB5NbQn7BX8OokIHSeLjU/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTMw/ODQxNjU3NC92ZWN0/b3IvaC1sZXR0ZXIt/c2hhcGUtbG9nby5q/cGc_cz02MTJ4NjEy/Jnc9MCZrPTIwJmM9/OXJ4TmFlaFVwaDZN/c0kxOVBVbnpMZkxv/bkt2aEdQcEFCQUdh/YmFZczYxMD0" style="height:60px; width:60px;"/>
+                    <h1 class="footer-section-mail-id">languagelearning@gmail.com</h1>
+                    <p class="footer-section-address">KL University.</p>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
 </body>
-
 </html>
