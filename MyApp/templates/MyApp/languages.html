@@ -55,30 +55,25 @@
 
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
-        <a class="navbar-brand logo" href="{% url 'index' %}">Language Learning</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="{% url 'index' %}">Home<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <button class="btn btn-light">Login</button>
-              <button class="btn btn-light">Register</button>
+             <button class="btn btn-light" onclick="location.href = '{% url 'login' %}'">Login</button>
+             <button class="btn btn-light" onclick="location.href = '{% url 'register' %}'">Register</button>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Languages
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">spanish</a>
-                <a class="dropdown-item" href="#">Hindi</a>
-                <a class="dropdown-item" href="#">English</a>
+                <a class="dropdown-item" href="{% url 'course3' %}">English</a>
+                <a class="dropdown-item" href="{% url 'course1' %}">Spanish</a>
+                <a class="dropdown-item" href="{% url 'course2' %}">Japanese</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="{}">More Languages</a>
+                <a class="dropdown-item" href="{% url 'languages' %}">More Languages</a>
               </div>
             </li>
           </ul>

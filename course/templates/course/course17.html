@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Översikt av thailändska språket</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'course/course1.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .heading {
+            color: white;
+            background-color: #1f5180;
+            padding: 20px;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .content {
+            color: #333;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
+        <a class="navbar-brand logo" href="{% url 'index' %}">Språkinlärning</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active"><a class="nav-link" href="#">Hem<span class="sr-only">(aktuell)</span></a></li>
+                <li class="nav-item">
+                    <button class="btn btn-light" onclick="location.href = '{% url 'login' %}'">Logga in</button>
+                    <button class="btn btn-light" onclick="location.href = '{% url 'register' %}'">Registrera</button>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">Språk</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Thailändska</a>
+                        <a class="dropdown-item" href="{% url 'languages' %}">Fler språk</a>
+                    </div>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Sök" aria-label="Sök">
+                <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Sök</button>
+            </form>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="text-center heading">swedish</h1>
+                <div class="content">
+                    <p>
+                        Thailändska (ภาษาไทย) är det officiella språket i Thailand och talas av över 70 miljoner människor. Det tillhör Tai-Kadai språkfamiljen.
+                    </p>
+                    <p>
+                        Thailändska använder sitt eget alfabet, som är en abugida med konsonanter och vokaler. Thailändska är tonalt, med fem distinkta toner som påverkar betydelsen av ord.
+                    </p>
+                    <p>
+                        Thailändsk grammatik är relativt enkel, utan tempus eller artiklar, men att behärska tonerna och alfabetet kan vara utmanande för nya elever.
+                    </p>
+                    <p>
+                        Att lära sig thailändska öppnar dörren till Thailands rika kulturarv och dess livliga turistindustri, samt erbjuder insikter i dess historia och religion.
+                    </p>
+                    <p>
+                        Avslutningsvis är thailändska ett unikt och fascinerande språk, viktigt för alla som vill fördjupa sig i Sydostasien.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex flex-row m-5 justify-content-between">
+        <button class="btn btn-outline-success" onclick="location.href='{% url 'quiz17' %}'">Försök Quiz</button>
+        <button class="btn btn-outline-danger" onclick="location.href='{% url 'languages' %}'">Tillbaka</button>
+    </div>
+</body>
+</html>

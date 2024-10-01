@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swahili Vocabulary Quiz</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .quiz-container {
+            margin: 20px;
+        }
+        .question {
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .quiz-container {
+                margin: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container quiz-container">
+        <h1 class="text-center">Swahili Vocabulary Quiz</h1>
+        <form>
+            <div class="question">
+                1. What is "hello" in Swahili?
+                <div>
+                    <label><input type="radio" name="q1" value="a"> a) Habari</label><br>
+                    <label><input type="radio" name="q1" value="b"> b) Kwaheri</label><br>
+                    <label><input type="radio" name="q1" value="c"> c) Asante</label>
+                </div>
+            </div>
+            <div class="question">
+                2. What does "asante" mean in Swahili?
+                <div>
+                    <label><input type="radio" name="q2" value="a"> a) Hello</label><br>
+                    <label><input type="radio" name="q2" value="b"> b) Goodbye</label><br>
+                    <label><input type="radio" name="q2" value="c"> c) Thank you</label>
+                </div>
+            </div>
+            <div class="question">
+                3. What is the Swahili word for "friend"?
+                <div>
+                    <label><input type="radio" name="q3" value="a"> a) Rafiki</label><br>
+                    <label><input type="radio" name="q3" value="b"> b) Mwalimu</label><br>
+                    <label><input type="radio" name="q3" value="c"> c) Nyumba</label>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block mt-3">Submit Quiz</button>
+        </form>
+    </div>
+</body>
+</html>

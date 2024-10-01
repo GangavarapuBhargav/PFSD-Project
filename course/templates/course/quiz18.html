@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thai Vocabulary Quiz</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .quiz-container {
+            margin: 20px;
+        }
+        .question {
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .quiz-container {
+                margin: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container quiz-container">
+        <h1 class="text-center">Thai Vocabulary Quiz</h1>
+        <form>
+            <div class="question">
+                1. What is "hello" in Thai?
+                <div>
+                    <label><input type="radio" name="q1" value="a"> a) สวัสดี (Sawasdee)</label><br>
+                    <label><input type="radio" name="q1" value="b"> b) ขอบคุณ (Khob khun)</label><br>
+                    <label><input type="radio" name="q1" value="c"> c) ลาก่อน (Laa gòn)</label>
+                </div>
+            </div>
+            <div class="question">
+                2. What does "ขอบคุณ" mean in Thai?
+                <div>
+                    <label><input type="radio" name="q2" value="a"> a) Excuse me</label><br>
+                    <label><input type="radio" name="q2" value="b"> b) Thank you</label><br>
+                    <label><input type="radio" name="q2" value="c"> c) Goodbye</label>
+                </div>
+            </div>
+            <div class="question">
+                3. What is the Thai word for "friend"?
+                <div>
+                    <label><input type="radio" name="q3" value="a"> a) เพื่อน (Pheuan)</label><br>
+                    <label><input type="radio" name="q3" value="b"> b) บ้าน (Baan)</label><br>
+                    <label><input type="radio" name="q3" value="c"> c) ครอบครัว (Khrop khrua)</label>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block mt-3">Submit Quiz</button>
+        </form>
+    </div>
+</body>
+</html>

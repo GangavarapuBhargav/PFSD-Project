@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dutch Vocabulary Quiz</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .quiz-container {
+            margin: 20px;
+        }
+        .question {
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .quiz-container {
+                margin: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container quiz-container">
+        <h1 class="text-center">Dutch Vocabulary Quiz</h1>
+        <form>
+            <div class="question">
+                1. What is "hello" in Dutch?
+                <div>
+                    <label><input type="radio" name="q1" value="a"> a) Dag</label><br>
+                    <label><input type="radio" name="q1" value="b"> b) Hallo</label><br>
+                    <label><input type="radio" name="q1" value="c"> c) Tot ziens</label>
+                </div>
+            </div>
+            <div class="question">
+                2. What does "dank je wel" mean in Dutch?
+                <div>
+                    <label><input type="radio" name="q2" value="a"> a) Please</label><br>
+                    <label><input type="radio" name="q2" value="b"> b) Thank you</label><br>
+                    <label><input type="radio" name="q2" value="c"> c) Excuse me</label>
+                </div>
+            </div>
+            <div class="question">
+                3. What is the Dutch word for "friend"?
+                <div>
+                    <label><input type="radio" name="q3" value="a"> a) Vriend</label><br>
+                    <label><input type="radio" name="q3" value="b"> b) Huis</label><br>
+                    <label><input type="radio" name="q3" value="c"> c) Werk</label>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block mt-3">Submit Quiz</button>
+        </form>
+    </div>
+</body>
+</html>

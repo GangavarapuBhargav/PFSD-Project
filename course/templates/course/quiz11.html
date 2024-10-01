@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hindi Vocabulary Quiz</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .quiz-container {
+            margin: 20px;
+        }
+        .question {
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .quiz-container {
+                margin: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container quiz-container">
+        <h1 class="text-center">Hindi Vocabulary Quiz</h1>
+        <form>
+            <div class="question">
+                1. What is "hello" in Hindi?
+                <div>
+                    <label><input type="radio" name="q1" value="a"> a) अलविदा</label><br>
+                    <label><input type="radio" name="q1" value="b"> b) नमस्ते</label><br>
+                    <label><input type="radio" name="q1" value="c"> c) धन्यवाद</label>
+                </div>
+            </div>
+            <div class="question">
+                2. How do you say "thank you" in Hindi?
+                <div>
+                    <label><input type="radio" name="q2" value="a"> a) धन्यवाद</label><br>
+                    <label><input type="radio" name="q2" value="b"> b) कृपया</label><br>
+                    <label><input type="radio" name="q2" value="c"> c) नमस्कार</label>
+                </div>
+            </div>
+            <div class="question">
+                3. What does "आप कैसे हैं?" mean in English?
+                <div>
+                    <label><input type="radio" name="q3" value="a"> a) Where are you?</label><br>
+                    <label><input type="radio" name="q3" value="b"> b) How are you?</label><br>
+                    <label><input type="radio" name="q3" value="c"> c) What is your name?</label>
+                </div>
+            </div>
+            <div class="question">
+                4. What is the Hindi word for "book"?
+                <div>
+                    <label><input type="radio" name="q4" value="a"> a) पेंसिल</label><br>
+                    <label><input type="radio" name="q4" value="b"> b) किताब</label><br>
+                    <label><input type="radio" name="q4" value="c"> c) कागज</label>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block mt-3">Submit Quiz</button>
+        </form>
+    </div>
+</body>
+</html>

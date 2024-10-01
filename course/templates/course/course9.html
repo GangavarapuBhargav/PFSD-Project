@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portuguese Language Overview</title>
+    <title>Visão Geral da Língua Tailandesa</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'course/course1.css' %}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -29,37 +29,58 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
-        <a class="navbar-brand logo" href="{% url 'index' %}">Language Learning</a>
+        <a class="navbar-brand logo" href="{% url 'index' %}">Aprendizado de Línguas</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active"><a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a></li>
+                <li class="nav-item active"><a class="nav-link" href="#">Início<span class="sr-only">(atual)</span></a></li>
                 <li class="nav-item">
                     <button class="btn btn-light" onclick="location.href = '{% url 'login' %}'">Login</button>
-                    <button class="btn btn-light" onclick="location.href = '{% url 'register' %}'">Register</button>
+                    <button class="btn btn-light" onclick="location.href = '{% url 'register' %}'">Registrar</button>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">Languages</a>
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">Línguas</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Portuguese</a>
-                        <a class="dropdown-item" href="#">German</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="{% url 'languages' %}">More Languages</a>
+                        <a class="dropdown-item" href="#">Tailandês</a>
+                        <a class="dropdown-item" href="{% url 'languages' %}">Mais Línguas</a>
                     </div>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+                <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+                <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Pesquisar</button>
             </form>
         </div>
     </nav>
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h1 class="text-center heading">Portuguese Language Overview</h1>
+                <h1 class="text-center heading">Visão Geral da Língua Tailandesa</h1>
                 <div class="content">
                     <p>
-                        Portuguese (português
+                        O tailandês (ภาษาไทย) é a língua oficial da Tailândia e é falado por mais de 70 milhões de pessoas. Ele faz parte da família de línguas Tai-Kadai.
+                    </p>
+                    <p>
+                        O tailandês usa seu próprio script, que é um abugida com consoantes e vogais. O tailandês é tonal, com cinco tons distintos que afetam o significado das palavras.
+                    </p>
+                    <p>
+                        A gramática tailandesa é relativamente simples, sem tempos verbais ou artigos, mas dominar os tons e a escrita pode ser desafiador para novos aprendizes.
+                    </p>
+                    <p>
+                        Aprender tailandês abre a porta para o rico patrimônio cultural da Tailândia e sua vibrante indústria de turismo, além de oferecer uma visão de sua história e religião.
+                    </p>
+                    <p>
+                        Em conclusão, o tailandês é uma língua única e fascinante, essencial para quem deseja se aprofundar no Sudeste Asiático.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex flex-row m-5 justify-content-between">
+        <button class="btn btn-outline-success" onclick="location.href='{% url 'quiz9' %}'">Tentar Quiz</button>
+        <button class="btn btn-outline-danger" onclick="location.href='{% url 'languages' %}'">Voltar</button>
+    </div>
+</body>
+</html>

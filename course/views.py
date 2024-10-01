@@ -58,3 +58,56 @@ def course18(request):
 
 def quiz1(request):
     return render(request, 'course/quiz1.html')
+
+def quiz2(request):
+    return render(request, 'course/quiz2.html')
+
+def quiz3(request):
+    return render(request, 'course/quiz3.html')
+
+
+def quiz4(request):
+    return render(request, 'course/quiz4.html')
+
+def quiz5(request):
+    return render(request, 'course/quiz5.html')
+
+def quiz6(request):
+    return render(request, 'course/quiz6.html')
+
+def quiz7(request):
+    return render(request, 'course/quiz7.html')
+
+def quiz8(request):
+    return render(request, 'course/quiz8.html')
+
+def quiz9(request):
+    return render(request, 'course/quiz9.html')
+
+def quiz10(request):
+    return render(request, 'course/quiz10.html')
+
+def quiz11(request):
+    return render(request, 'course/quiz11.html')
+
+def quiz12(request):
+    return render(request, 'course/quiz12.html')
+
+def quiz13(request):
+    return render(request, 'course/quiz13.html')
+
+def quiz14(request):
+    return render(request, 'course/quiz14.html')
+
+def quiz15(request):
+    return render(request, 'course/quiz15.html')
+
+def quiz16(request):
+    return render(request, 'course/quiz16.html')
+
+def quiz17(request):
+    return render(request, 'course/quiz17.html')
+
+def quiz18(request):
+    return render(request, 'course/quiz18.html')
+

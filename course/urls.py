@@ -22,4 +22,22 @@ urlpatterns = [
     path('course17/', views.course17, name='course17'),
     path('course18/', views.course18, name='course18'),
     path('quiz1/', views.quiz1, name='quiz1'),
+    path('quiz2/', views.quiz2, name='quiz2'),
+    path('quiz3/', views.quiz3, name='quiz3'),
+    path('quiz4/', views.quiz4, name='quiz4'),
+    path('quiz5/', views.quiz5, name='quiz5'),
+    path('quiz6/', views.quiz6, name='quiz6'),
+    path('quiz7/', views.quiz7, name='quiz7'),
+    path('quiz8/', views.quiz8, name='quiz8'),
+    path('quiz9/', views.quiz9, name='quiz9'),
+    path('quiz10/', views.quiz10, name='quiz10'),
+    path('quiz11/', views.quiz11, name='quiz11'),
+    path('quiz12/', views.quiz12, name='quiz12'),
+    path('quiz13/', views.quiz13, name='quiz13'),
+    path('quiz14/', views.quiz14, name='quiz14'),
+    path('quiz15/', views.quiz15, name='quiz15'),
+    path('quiz16/', views.quiz16, name='quiz16'),
+    path('quiz17/', views.quiz17, name='quiz17'),
+    path('quiz18/', views.quiz18, name='quiz18')
+
 ]
